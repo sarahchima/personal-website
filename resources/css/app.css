@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
 
 html, body {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    box-sizing: border-box;
 
 }
-
-/* h1,h2,h3,h4,h5,h6 {
-    font-family: 'Roboto', sans-serif;
-
-} */
 
 p {
     font-size: 16px;
@@ -28,7 +27,7 @@ a, button {
 .navbar {
     background-color: transparent;
     min-height: 60px;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     z-index: 3;
     border-color: transparent;
 }
@@ -51,13 +50,24 @@ a, button {
     transition: all .25s;
 }
 
-.navbar-nav a {
+.navbar .navbar-nav a, .navbar-expand-lg .navbar-nav .nav-link {
     color: #303030;
     font-size: 16px;
+    line-height: 1.2;
     padding: 1rem 1.5rem;
+    margin-right: 1rem;
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
 }
+
+.navbar .navbar-nav li {
+    margin-right: 0.5rem;
+}
+
+.navbar .navbar-nav li:last-of-type {
+    margin-right: 0;
+}
+
 
 .navbar a.active {
     background-color: #C7BFCF;
@@ -72,10 +82,13 @@ a, button {
     min-height: calc(100vh - 71px - 3rem);
 }
 
-.header h1 img {
-    font-size: 40px;
-    line-height: 1;
-    width: 450px;
+.header h1{
+    font-size: 100px;
+    font-family: 'Allura', cursive;
+    color: #4A1A76;
+    font-weight: bold;
+    line-height: .5;
+
 }
 
 .header h2 {
@@ -120,7 +133,7 @@ a, button {
     fill: #4A1A76;
     font-size: 40px; 
     width: 30px;
-    margin-left: -10px;
+    margin-left: -15px;
 }
 
 .header-container {
@@ -175,7 +188,7 @@ a, button {
     display: block;
     text-align: center;
     height: 5px;
-    width: 70px;
+    width: 50px;
     margin: 5px auto;
     background-color: #C7BFCF;
 }
@@ -184,9 +197,17 @@ a, button {
     background-image: url("../img/memphis.svg");
 }
 
+.projects-main h2 {
+    margin-bottom: 4rem;
+}
+
 .projects-main .row {
-    padding: 8rem 0;
+    padding: 4rem 0;
     min-height: 300px;
+}
+
+.projects-main .row:last-of-type {
+    padding-bottom: 0;
 }
 
 .projects-main-row>div, .projects-main-row>article {
@@ -200,7 +221,7 @@ a, button {
     opacity: 0;
     visibility: hidden;
     transform-origin: left;
-    animation: fadeText 1.5s linear 2s forwards;
+    animation: fadeText 1.5s linear 1s forwards;
     color: #4A1A76;
 }
 
@@ -216,7 +237,7 @@ a, button {
     opacity: 0;
     visibility: hidden;
     transform-origin: left;
-    animation: fadeText 1.5s linear 2.5s forwards;
+    animation: fadeText 1.5s linear 1.5s forwards;
     color: #404040;
 }
 
@@ -249,11 +270,9 @@ a, button {
 .projects-image img{
     transform: scaleX(0);
     visibility: hidden;
-    height: 250px;
     z-index: -1;
     transform-origin: 100% 100% ;
     max-width: 100%;
-    width: 100%;
 }
 
 .projects-image1 img {
@@ -265,7 +284,7 @@ a, button {
 }
 
 .projects-image3 img {
-    animation: fade 0s linear 2.5s forwards;
+    animation: fade 0s linear 0.5s forwards;
 }
 
 .box-animation {
@@ -296,7 +315,7 @@ a, button {
 }
 
 .box-animation3::after {
-    animation: overlay 1.5s ease 1.5s;
+    animation: overlay 1.5s ease 0.5s;
     width: calc(100% - 5rem - 15px);
 }
 
@@ -361,7 +380,7 @@ a, button {
 
 .about-me-container {
     display: flex;
-    margin: 4rem auto;
+    margin: 4rem auto 0;
 }
 
 .about-me picture {

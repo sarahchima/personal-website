@@ -32,3 +32,22 @@ function check_if_in_view() {
       }
     });
   }
+
+$(".scroll").on('click', function(event) {
+
+  if (this.hash !== "") {
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top-70
+    }, 800, function(){
+    });
+  } // End if
+});
+
+AOS.init({
+  duration: 1200,
+})
+
