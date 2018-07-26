@@ -11,7 +11,7 @@ html, body {
 }
 
 p {
-    font-size: 16px;
+    font-size: calc( 1em + 2px);
 }
 
 body {
@@ -19,6 +19,18 @@ body {
     background-color: #f2f2f2;
     padding-top: 3rem;
     position: relative;
+}
+
+
+
+@media (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        padding-top: 0;
+    }
 }
 
 a, button {
@@ -50,7 +62,7 @@ a, button {
     transition: all .25s;
 }
 
-.navbar .navbar-nav a, .navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-lg .navbar-nav .nav-link {
     color: #303030;
     font-size: 16px;
     line-height: 1.2;
@@ -88,14 +100,19 @@ a, button {
     color: #4A1A76;
     font-weight: bold;
     line-height: .5;
-
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeText 1s ease 0.25s forwards;
 }
 
 .header h2 {
     font-size: 30px;
     font-weight: 400;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeText 1s ease 0.75s forwards;
 }
 
 .header .about-link {
@@ -113,6 +130,9 @@ a, button {
     margin: 0 auto;
     justify-content: center;
     text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeText 1s ease 1.25s forwards;
 }
 
 .header .about-link:hover {
@@ -123,10 +143,10 @@ a, button {
 
 .header .scroll-link {
     font-size: 30px;
-    animation: fadeTranslate 1s linear 0s infinite alternate;
+    opacity: 0;
+    animation: fadeTranslate 1s linear 1.5s infinite alternate;
     position: absolute;
     bottom: -40px;
-
 }
 
 .header .scroll-link svg {
@@ -157,6 +177,7 @@ a, button {
     text-align: center;
 }
 
+
 @keyframes fadeTranslate {
     from {
         opacity: 0;
@@ -165,6 +186,55 @@ a, button {
     to {
         opacity: 1;
         transform: translateY(30px);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+        padding: 0 2rem;
+    }
+
+    .navbar-toggler {
+        padding: 10px 15px;
+        background-color: #C7BFCF;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggler-icon {
+        background-color: white;
+        height: 3px;
+        margin-bottom: 3px;
+    }
+
+    .navbar-toggler-icon:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .navbar .navbar-nav {
+        margin: 20px 0;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-right: 0;
+    }
+
+    .navbar .navbar-nav li {
+        margin-right: 0;
+    }
+
+    .header h1 {
+        font-size: calc( 50px + 40 * ((100vw - 300px) / 991));
+    }
+
+    .header h2 {
+        font-size: calc( 20px + 30 * ((100vw - 300px) / 991));
+        margin: 15px;
+    }
+
+    .header {
+
+        min-height: 50vh;
     }
 }
 
@@ -197,6 +267,7 @@ a, button {
     background-image: url("../img/memphis.svg");
 }
 
+
 .projects-main h2 {
     margin-bottom: 4rem;
 }
@@ -204,10 +275,6 @@ a, button {
 .projects-main .row {
     padding: 4rem 0;
     min-height: 300px;
-}
-
-.projects-main .row:last-of-type {
-    padding-bottom: 0;
 }
 
 .projects-main-row>div, .projects-main-row>article {
@@ -223,6 +290,11 @@ a, button {
     transform-origin: left;
     animation: fadeText 1.5s linear 1s forwards;
     color: #4A1A76;
+}
+
+.projects-article-header a {
+    color: #4A1A76;
+
 }
 
 .projects-main article {
@@ -243,18 +315,37 @@ a, button {
 
 .projects-sec-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
     grid-auto-rows: minmax(250px, auto);
     margin-top: 4rem;
 }
 
 .projects-sec-container picture {
-    height: 250px;
+    height: 280px;
     width: 100%;
     display: block;
     background-color: #f2f2f2;
 }
+
+.project-sec {
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #f2f2f2;
+}
+
+.project-sec-pomodoro {
+    background-image: url("../img/pomodoro.png");
+}
+
+.project-sec-clock {
+    background-image: url("../img/clock.png");
+}
+
+.project-sec-tagit {
+    background-image: url("../img/tagit.png");
+}
+
 
 .projects-sec-container h3 {
     font-size: 20px;
@@ -347,7 +438,7 @@ a, button {
 }
 
 .section.articles {
-    background-color: #fafafa;
+    background-color: white;
 }
 
 .articles-container {
@@ -371,9 +462,21 @@ a, button {
     margin-bottom: 0;
 }
 
+.projects-tech {
+    font-size: 18px;
+}
+
 .articles-more {
     font-size: 16px;
 }
+
+
+/* 
+    *
+        About Me Section 
+    *
+*/
+
 .about-me {
     background-color: #f2f2f2;
 }
@@ -452,4 +555,69 @@ a, button {
 .contact-form input[type="submit"] {
     color: #4A1A76;
     font-weight: bold;
+}
+
+/* 
+    *   
+        Small Screens 
+    *
+*/
+@media (max-width: 767px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .projects-main .row {
+        padding: 1rem 0;
+    }
+
+    .projects-main h2 {
+        margin-bottom: 2rem;
+    }
+
+    .projects-main .col-sm-6 {
+        padding-right: 2rem;
+    }
+
+    .projects-main article {
+        min-height: 1px;
+    }
+
+    .projects-row-reverse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-row-reverse .projects-image {
+        order: 2;
+    }
+
+    .projects-main h2, .projects-main>p {
+        text-align: left;
+    }
+}
+
+/* Text Colors */
+.scss {
+    color: #C26B98;
+}
+
+.javascript {
+    color: #F3DD4F;
+}
+
+.html {
+    color: #D45736;
+}
+
+.bootstrap {
+    color: #7B56CA;
+}
+
+.react {
+    color: #7FD8F7;
+}
+
+.highlight {
+    color: #4A1A76;
 }

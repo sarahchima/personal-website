@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" >
-                        <a class="nav-link scroll" href="#projects">PROJECTS</a>
+                        <a class="nav-link scroll" href="#projects">WORKS</a>
                     </li>
                     <li class="nav-item nav-item-ext">
                         <a class="nav-link scroll" href="#articles">ARTICLES</a>
@@ -47,7 +47,7 @@
         <div class="container header-container">
             <div>
                 <h1>Sarah Chima</h1>
-                <h2>Frontend Developer. UI Designer. Technical Writer</h2>
+                <h2>Frontend Developer & Technical Writer</h2>
                 <div><a class="about-link scroll" href="#about">About Me</a></div>
                 <a class="scroll-link scroll" href="#projects"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/> </g></svg></a>
             </div>
@@ -57,12 +57,13 @@
     <main>
 
         <section class="section projects-main" id="projects" >
-            <h2>FRONTEND PROJECTS</h2>
+            <h2>WORKS</h2>
+            <p></p>
             <div class="row projects-main-row" >
                 <article class="col-sm-6">
-                    <h3 class="projects-article-header">Hotels.ng</h3>
-                    <p>I’m a UI/UX engineer from Nigeria currently working at Hotels.ng(Nigeria’s number 1 hotel booking platform). I love writing articles on Frontend development too.</p>
-                    <p><strong>Tech used:</strong> HTML, CSS, SASS</p>
+                    <h3 class="projects-article-header"><a href="https://hotels.ng">Hotels.ng</a></h3>
+                    <p>Hotels.ng is Nigeria's number 1 Hotel Booking Portal. As a Frontend developer, I built over 70% of the user interface of the version 7 of the website. I improved the <strong class="highlight">accessibility</strong> of the site and ensured it is both <strong class="highlight">responsive</strong> and <strong class="highlight">cross-browser compatible</strong> (Opera Mini included 😉). </p>
+                    <p class="projects-tech"><strong>Tech used: <span class="html">HTML</span>, <span class="scss">SCSS</span>, <span class="javascript">JavaScript</span></strong></p>
                 </article>
 
                 <div class="col-sm-6 projects-image projects-image3">
@@ -73,23 +74,24 @@
 
 
             </div>
-            <div class="row projects-main-row">
+            <div class="row projects-main-row projects-row-reverse">
                 <div class="col-sm-6 projects-image projects-image3">
                     <div class="box-animation box-animation3">
-                        <img class="header-img" href="" src="resources/img/factory-big.png" />
+                        <img class="header-img" href="" src="resources/img/factory.png" />
                     </div>
                 </div>
                 <article class="col-sm-6">
                     <h3 class="projects-article-header">Factory</h3>
-                    <p>I’m a UI/UX engineer from Nigeria currently working at Hotels.ng(Nigeria’s number 1 hotel booking platform). I love writing articles on Frontend development too.</p>
-                    <p><strong>Tech used:</strong> React, SCSS</p>
+                    <p>Factory is a performance management tool. I contributed to several parts of the UI of the tool and built most external pages.</p>
+                    <p class="projects-tech"><strong>Tech used: <span class="html">HTML</span>, <span class="scss">SCSS</span>, <span class="javascript">JavaScript</span>, <span class="bootstrap">Bootstrap</span></strong></p>
                 </article>
             </div>
             <div class="row projects-main-row" >
                 <article class="col-sm-6">
                     <h3 class="projects-article-header">Ekobits Job Portal</h3>
-                    <p>I’m a UI/UX engineer from Nigeria currently working at Hotels.ng(Nigeria’s number 1 hotel booking platform). I love writing articles on Frontend development too.</p>
-                    <p><strong>Tech used:</strong> React, SCSS</p>
+                    <p>A job portal for hiring students of the Ekobits Academy. As the Lead Frontend developer, I was responsible for building a major part of the UI of the portal.</p>
+                    <p>I built the landing page and some dashboards and made sure they were all <strong class="highlight">responsive</strong>. Using <strong class="highlight">React</strong> made it easy to keep the project modular.</p>
+                    <p class="projects-tech"><strong>Tech used: <span class="react">React</span>, <span class="scss">SCSS</span>, <span class="javascript">JavaScript</span>, <span class="bootstrap">Bootstrap</span></strong></p>
                 </article>
 
                 <div class="col-sm-6 projects-image projects-image3">
@@ -101,28 +103,29 @@
 
             </div>
 
-        </section>
-
-        <section class="section projects-sec" id="">
-            <h2>JAVASCRIPT PROJECTS</h2>
-            <p class="text-center">I’m a UI/UX engineer from Nigeria currently working at Hotels.ng(Nigeria’s number 1 hotel booking platform). I love writing articles on Frontend development too.</p>
+            <h2>EXPERIMENTS AND OPEN SOURCE</h2>
+            <p class="text-center">I love building small projects on Codepen</p>
             <div class="container projects-sec-container">
                 <div>
-                    <picture>
+                    <picture class="project-sec project-sec-pomodoro">
+                        
                     </picture>
-                    <h3>JavaScript Calculator</h3>
-                    <p><strong>Tech used:</strong> React</p>
+                    <h3>Pomodoro Clock</h3>
+                    <p>A Freecodecamp project based on the Pomodoro principle.</p>
+                    <p><strong>Tech used:</strong> JavaScript, JQuery, HTML/CSS</p>
                 </div>
                 <div>
-                    <picture>
+                    <picture class="project-sec project-sec-clock">
                     </picture>
-                    <h3>JavaScript Calculator</h3>
-                    <p><strong>Tech used:</strong> React</p>
+                    <h3>Animated Clock</h3>
+                    <p>I played with CSS animation and this was the result.</p>
+                    <p><strong>Tech used:</strong> CSS, JQuery</p>
                 </div>
                 <div>
-                    <picture>
+                    <picture class="project-sec project-sec-tagit">
                     </picture>
-                    <h3>JavaScript Calculator</h3>
+                    <h3>Tag it</h3>
+                    <p>I wrote several articles on React and decided to build this simple tag adder tool to demostrate how to build a React app. </p>
                     <p><strong>Tech used:</strong> React</p>
                 </div>  
                            
