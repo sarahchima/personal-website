@@ -268,7 +268,7 @@ a, button {
 }
 
 
-.projects-main h2 {
+.projects-main .h2 {
     margin-bottom: 4rem;
 }
 
@@ -571,7 +571,7 @@ a, button {
         padding: 1rem 0;
     }
 
-    .projects-main h2 {
+    .projects-main .h2 {
         margin-bottom: 2rem;
     }
 
