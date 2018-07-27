@@ -234,7 +234,7 @@ a, button {
 
     .header {
 
-        min-height: 50vh;
+        min-height: 90vh;
     }
 }
 
@@ -592,9 +592,9 @@ a, button {
         order: 2;
     }
 
-    .projects-main h2, .projects-main>p {
+    /* .projects-main h2, .projects-main>p {
         text-align: left;
-    }
+    } */
 }
 
 /* Text Colors */
