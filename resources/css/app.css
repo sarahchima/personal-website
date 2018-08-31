@@ -439,7 +439,7 @@ a, button {
 
 .articles-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
     grid-gap: 40px;
     margin-top: 5rem;
@@ -510,6 +510,7 @@ a, button {
 .contact-others i{
     font-size: 40px;
     margin-right: 40px;
+    color: white;
 }
 
 .contact {
