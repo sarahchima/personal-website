@@ -47,7 +47,19 @@ $(".scroll").on('click', function(event) {
   } // End if
 });
 
-AOS.init({
-  duration: 1200,
+
+$('.nav-link').click(() => {
+   $('.navbar-collapse').removeClass('show');
+   $('.navbar-toggler').addClass('collapsed');
 })
 
+
+$('#contactForm').submit((e) => {
+  const contactName = $('#contact-name');
+  const contactEmail = $('#contact-email');
+  const contactMessage = $('#contact-message');
+
+  if (contactName == "" || contactEmail == "" || contactMessage == "") {
+  }
+    
+})

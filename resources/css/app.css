@@ -46,18 +46,32 @@ a, button {
 }
 
 
-.navbar.active {
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    transition: all 2s;
-    margin-top: 0;
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
-    transition: all .25s;
+@media (min-width: 992px) {
+    .navbar.active {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 2s;
+        margin-top: 0;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 1px solid #d8d8d8;
+        transition: all .25s;
+    }
 }
 
+@media (max-width: 991px) {
+    .navbar {
+        background-color: #f2f2f2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar.active {
+        background-color: white;
+    }
+}
 .navbar:hover {
     box-shadow: 0 0 15px rgba(0,0,0,.15);
     transition: all .25s;
@@ -73,6 +87,11 @@ a, button {
     text-decoration: none;
 }
 
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        text-align: center;
+    }
+}
 .navbar .navbar-nav li {
     margin-right: 0.5rem;
 }
@@ -235,7 +254,7 @@ a, button {
 
     .header {
 
-        min-height: 90vh;
+        min-height: 100vh;
     }
 }
 
