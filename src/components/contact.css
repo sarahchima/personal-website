@@ -1,0 +1,76 @@
+/* cp = contact page */
+
+.cp {
+    min-height: 50vh;
+}
+
+.cp-article p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.cp-article {
+    margin-bottom: 4rem;
+}
+
+.cp-header {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.cp-row {
+    display: grid;
+    grid-template-columns: 2fr 1.3fr;
+    grid-gap: 4rem;
+    margin-top: 4rem;
+}
+
+.cp-text {
+    width: 80%;
+}
+
+.cp-icons {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.cp-icons .fa {
+    font-size: 40px;
+    color: #303030;
+} 
+
+.cp-form {
+    border: 1px solid #a1a1a4;
+    padding: 4rem;
+    margin-top: 8px;
+}
+
+
+.cp-input, .cp-button {
+    width: 100%;
+    height: 41px;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    font-size: 16px;
+}
+
+.cp-button {
+    margin-top: 1.5rem;
+    background-color: #C7BFCF;
+    border: 0;
+    margin-bottom: 0;
+}
+.cp-label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    display: block;
+}
+
+.cp-textarea {
+    height: 150px;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #a1a1a4;
+    font-size: 16px;
+}

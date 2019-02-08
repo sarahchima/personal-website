@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+p {
+    font-size: calc( 1em + 2px);
+}
+
+body {
+    color: #303030;
+    background-color: #fafafa;
+    padding-top: 3rem;
+    position: relative;
+}
+
+
+
+@media (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #828282;
+}
+
+/* ap = about-page */
+
+.ap {
+    display: flex;
+    min-height: calc(100vh - 100px);
+    align-items: center;
+}
+
+.ap-header {
+    font-size: 40px;
+    line-height: .1;
+}
+
+.ap-img {
+    width: 500px;
+    height: 500px;
+}
+
+.ap-picture {
+    margin-right: auto;
+}
+
+.ap-text {
+    width: 50%;
+    padding-left: 3.4rem;
+}
+
+.ap-text p {
+    line-height: 1.6;
+}
+.section {
+    margin-top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.link {
+    color: #4A1A76;
+}
+
