@@ -10,7 +10,7 @@ import Footer from '../components/footer'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   const tags = data.allMarkdownRemark.group
 
   return (
@@ -21,15 +21,15 @@ const Tags = ({ pageContext, data }) => {
 			<div className="a-articles">
 				{/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
 				{edges.map(({ node }) => {
-					const { title, description } = node.frontmatter
+					const { title, description, date, tags } = node.frontmatter
 					const { slug } = node.fields
 
 					return (
                         <div className="a-article" key={node.id}>
-                            <time className="a-article-date">{node.frontmatter.date}</time>
-                            <Link to={node.fields.slug}><h2 className="a-article-title">{node.frontmatter.title}</h2></Link>
-                            <p>{node.frontmatter.description}</p>
-                            <p className="a-article-tags">{node.frontmatter.tags.map(tag => (
+                            <time className="a-article-date">{date}</time>
+                            <Link to={node.fields.slug}><h2 className="a-article-title">{title}</h2></Link>
+                            <p>{description}</p>
+                            <p className="a-article-tags">{tags.map(tag => (
                                 <Link to={`/tags/${tag}`}><span key={tag} className="a-article-tag">#{tag} </span></Link>
                             ))}</p>
 

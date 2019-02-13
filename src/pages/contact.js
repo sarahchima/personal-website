@@ -20,7 +20,7 @@ export default () => (
                         <p>You can contact me for other important reasons. Maybe you want to ask any technical question or need help with a frontend development problem or you just want to say hi. You reach out to me on <a href="https://twitter.com/sarah_chima"><strong>Twitter</strong>.</a></p>
                     </article>
 
-                    <article className="cp-article">
+                    <article className="cp-article cp-article-others">
                         <h2>Other Relevant Links</h2>
 
                         <div class="cp-icons">

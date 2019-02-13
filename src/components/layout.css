@@ -2,6 +2,81 @@
 @import url('https://fonts.googleapis.com/css?family=Allura');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+body {
+ line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+ display:block;
+}
+nav ul {
+ list-style:none;
+}
+blockquote, q {
+ quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+a {
+ margin:0;
+ padding:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+ background-color:#ff9;
+ color:#000;
+ text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+ background-color:#ff9;
+ color:#000; 
+ font-style:italic;
+ font-weight:bold;
+}
+del {
+ text-decoration: line-through;
+}
+/* change border colour to suit your needs */
+hr {
+ display:block;
+ height:1px;
+ border:0; 
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
+}
+input, select {
+ vertical-align:middle;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -13,8 +88,24 @@ html, body {
 
 }
 
+h1, 
+h2, 
+h3,
+h4, 
+h5,
+h6 {
+    line-height: 1.2em;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 28px;
+}
+
 p {
     font-size: calc( 1em + 2px);
+    line-height: 1.4;
+    margin-bottom: 1rem;
 }
 
 body {
@@ -23,7 +114,6 @@ body {
     padding-top: 3rem;
     position: relative;
 }
-
 
 
 @media (max-width: 767px) {
@@ -44,15 +134,28 @@ a {
     text-decoration: none;
 }
 
+ul, ol {
+    padding-left: 4rem;
+}
+
 .container {
+    width: 85%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 2rem;
+    }
+} 
+
 .footer {
     text-align: center;
     padding: 2.5rem 0;
-    margin-top: 4rem;
+    margin-top: 6rem;
     border-top: 1px solid #828282;
 }
 
@@ -62,32 +165,35 @@ a {
     display: flex;
     min-height: calc(100vh - 100px);
     align-items: center;
+    padding: 2rem 0;
 }
 
 .ap-header {
     font-size: 40px;
-    line-height: .1;
+    line-height: 1.5;
 }
 
 .ap-img {
-    width: 500px;
-    height: 500px;
+    max-width: 100%;
 }
 
 .ap-picture {
     margin-right: auto;
+    width: 50%;
+    max-width: 500px;
 }
 
 .ap-text {
     width: 50%;
     padding-left: 3.4rem;
+    min-width: 600px;
 }
 
 .ap-text p {
     line-height: 1.6;
 }
 .section {
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 
 .text-center {
@@ -97,4 +203,34 @@ a {
 .link {
     color: #4A1A76;
 }
+@media (max-width: 1300px) {
 
+    .ap-text {
+        width: 65%;
+    }
+}
+
+@media (max-width: 900px) {
+    .ap {
+        flex-direction: column;
+    }
+
+    .ap-picture {
+        margin: 4rem auto 2rem;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .ap-text {
+        width: 100%;
+        padding: 0 0 2rem;
+        min-width: 1px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .ap-header {
+        font-size: 28px;
+    }
+}

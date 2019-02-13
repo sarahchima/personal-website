@@ -11,8 +11,9 @@ import '../components/projects.css'
 export default () => (
     <Layout>
         <section className="section projects-main" id="projects" >
-            <header>
-                {/* <h1 className="a-header">Major Projects</h1> */}
+            <header className="projects-header">
+                <h1 className="">MAJOR PROJECTS</h1>
+                <p>These are some large scale projects I have worked on with awesome teammates.</p>
             </header>
             <div className="projects-main-row" >
                 <article className="projects-article">
@@ -54,10 +55,11 @@ export default () => (
                 </div>
             </div>
 
-            
-            <h2 className="text-center">EXPERIMENTS AND OPEN SOURCE</h2>
-            <p class="text-center">Other smaller projects I have built</p>
-            <div class="container projects-sec-container">
+            <div className="projects-sec-header">
+                <h2 className="text-center">EXPERIMENTS AND OPEN SOURCE</h2>
+                <p class="text-center">Other smaller projects I have built.</p>
+            </div>
+            <div class="projects-sec-container">
                 <div>
                     <picture class="project-sec ">
                         <img class="header-img" alt="" src="http://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,h_646,w_778/v1532919673/personal-webiste/pomodoro.png" />

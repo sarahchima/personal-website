@@ -13,6 +13,14 @@
     margin-bottom: 4rem;
 }
 
+.cp-article h2 {
+    font-size: 24px;
+}
+
+.cp-article-others h2{
+    margin-bottom: 1rem;
+}
+
 .cp-header {
     font-size: 30px;
     margin-top: 0;
@@ -20,7 +28,7 @@
 
 .cp-row {
     display: grid;
-    grid-template-columns: 2fr 1.3fr;
+    grid-template-columns: 2fr 1.73fr;
     grid-gap: 4rem;
     margin-top: 4rem;
 }
@@ -31,7 +39,8 @@
 
 .cp-icons {
     display: flex;
-    width: 40%;
+    width: 45%;
+    min-width: 250px;
     justify-content: space-between;
 }
 
@@ -60,6 +69,7 @@
     background-color: #C7BFCF;
     border: 0;
     margin-bottom: 0;
+    border: 1px solid #a1a1a4;
 }
 .cp-label {
     margin-bottom: 5px;
@@ -73,4 +83,16 @@
     padding: 1rem;
     border: 1px solid #a1a1a4;
     font-size: 16px;
+}
+
+@media (max-width: 900px) {
+
+    .cp-text {
+        width: 100%;
+    }
+    .cp-row {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
 }
