@@ -39,22 +39,22 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: `https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg``,
+                content: `https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg`,
               },
               {
-                name: `twitter:card`,
+                property: `twitter:card`,
                 content: `summary`,
               },
               {
-                name: `twitter:creator`,
+                property: `twitter:creator`,
                 content: data.site.siteMetadata.author,
               },
               {
-                name: `twitter:title`,
+                property: `twitter:title`,
                 content: title,
               },
               {
-                name: `twitter:description`,
+                property: `twitter:description`,
                 content: metaDescription,
               },
               {

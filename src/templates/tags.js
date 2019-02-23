@@ -20,7 +20,7 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
 		<SEO 
 			title={`${tag} - `}
-			keywords={`${tag}`}
+			keywords={[`${tag}`]}
 		/>
       <div className="at">
         <h1 className="a-header">#{tag}</h1>
