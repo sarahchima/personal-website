@@ -49,17 +49,17 @@ export default class Navbar extends React.Component {
                             <Link to="/" className="nav-link" activeClassName="active">About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/projects" className="nav-link" activeClassName="active">projects</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link to="/blog" className="nav-link" activeClassName="active">articles</Link>
+                        </li>                        
+                        <li className="nav-item">
+                            <Link to="/projects" className="nav-link" activeClassName="active">projects</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/contact" className="nav-link" activeClassName="active">Contact</Link>
                         </li>
                     </ul>
                 }
-                <button class="navbar-toggle" onClick={this.handleToggleMenu}>
+                <button className="navbar-toggle" onClick={this.handleToggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>

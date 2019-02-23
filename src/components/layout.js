@@ -1,15 +1,20 @@
 import React from 'react'
 import Navbar from './navbar'
-// import Footer from './footer'
-
+import SEO from '../components/seo'
 import './layout.css'
 
 
 const Layout = ( {children} ) => (
-    <main className="container">
-        <Navbar />
-        {children}
-    </main>
+    <div>
+        <SEO 
+            title={`Sarah Chima`}
+            lang={`en`}
+        />
+        <main className="container">
+            <Navbar />
+            {children}
+        </main>
+    </div>
 )
 
 export default Layout

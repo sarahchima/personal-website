@@ -2,7 +2,7 @@
 title: ES6 classes
 date: "2017-10-27"
 description: ES6's new syntax for creating classes.
-tags: ["es6", "JavaScript"]
+tags: ["es6", "javascript"]
 ---
 
 

@@ -1,22 +1,27 @@
 import React from "react"
+import { Link } from 'gatsby'
+
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 import Potrait from '../images/potrait2.jpg'
 
 export default () => (
     <Layout>
+        <SEO 
+            title={` `}
+            keywords={[`Front-End Engineer`, `UI`, `Developer`, `CSS`, `JavaScript`]}
+        />
         <div className="ap">
             <picture className="ap-picture">
-                <img class="ap-img" src={Potrait} alt="" />
+                <img className="ap-img" src={Potrait} alt="Sarah" />
             </picture> 
-            <article class="ap-text">
-                <h1 class="ap-header">Hi, I'm Sarah.</h1>
-                <p>I am a <strong>Frontend Engineer</strong> from Nigeria. I am well versed in client-side technologies, HTML, CSS, and JavaScript. I have built many UI designs and I always pay close attention to the details of a design. I know CSS so well that no interface will be too hard for me to build.  </p>
-                <p>I am a strong advocate of responsive and accessible websites and I endeavor to build web pages that are both responsive and accessible. I use SASS to keep my CSS maintainable and modular.  I have also built web pages and applications with React and Redux. I understand how REST APIs work and I have built several applications with it. </p>
-                <p>When I am not coding, I write technical articles on dev.to. These articles cover a wide range of Front-end topics including React, ES6, CSS, and SASS. Recently, my article was one of the top seven articles of the week on dev.to. I also love designing user interfaces with Figma and applying principles of UX.</p>
+            <article className="ap-text">
+                <h1 className="ap-header">Hi, I'm Sarah.</h1>
+                <p>I am a <strong>Frontend Developer</strong> from Nigeria. I am a strong advocate of responsive and accessible websites. I love challenges and I believe facing new challenges is the best way to grow as an Engineer.</p>
+                <p>When I am not coding, I write blog posts on my <Link to={`/blog`} className="bold"> blog </Link> or on <a href="https://www.instagram.com/sarah_codes_/" className="bold">Instagram</a>. These articles cover a wide range of Frontend topics including React, ES6, CSS, and SASS. I love designing user interfaces with Figma and applying principles of UX.</p>
+                <p>I also love cooking, listening to good music and sharing the good news with people.</p>
             </article>
-
-
         </div>
     </Layout>
 )

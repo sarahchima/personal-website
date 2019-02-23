@@ -78,8 +78,9 @@
         position: absolute;
         top: 50px;
         left: 0;
-        padding: 2rem;
+        padding: 2rem 2rem 1rem;
         background: #fafafa;
         z-index: 2;
+        border-bottom: 1px solid #C7BFCF;
     }
 }

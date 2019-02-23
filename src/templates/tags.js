@@ -7,6 +7,9 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import Footer from '../components/footer'
+import SEO from '../components/seo'
+
+import '../components/blog.css'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -15,6 +18,10 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
+		<SEO 
+			title={`${tag} - `}
+			keywords={`${tag}`}
+		/>
       <div className="at">
         <h1 className="a-header">#{tag}</h1>
 		<div className="a-main">
@@ -25,15 +32,15 @@ const Tags = ({ pageContext, data }) => {
 					const { slug } = node.fields
 
 					return (
-                        <div className="a-article" key={node.id}>
-                            <time className="a-article-date">{date}</time>
-                            <Link to={node.fields.slug}><h2 className="a-article-title">{title}</h2></Link>
-                            <p>{description}</p>
-                            <p className="a-article-tags">{tags.map(tag => (
-                                <Link to={`/tags/${tag}`}><span key={tag} className="a-article-tag">#{tag} </span></Link>
-                            ))}</p>
+            <div className="a-article" key={node.id}>
+                <time className="a-article-date">{date}</time>
+                <Link to={slug}><h2 className="a-article-title">{title}</h2></Link>
+                <p>{description}</p>
+                <p className="a-article-tags">{tags.map(tag => (
+                    <Link to={`/tags/${tag}`}><span key={tag} className="a-article-tag">#{tag} </span></Link>
+                ))}</p>
 
-                        </div>
+            </div>
 					)
 				} )}
 				

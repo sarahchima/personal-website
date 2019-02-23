@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
 @import url('https://fonts.googleapis.com/css?family=Allura');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn-images.mailchimp.com/embedcode/classic-10_7.css');
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -191,6 +192,7 @@ ul, ol {
 
 .ap-text p {
     line-height: 1.6;
+    font-size: 18px;
 }
 .section {
     margin-top: 6rem;
@@ -203,6 +205,35 @@ ul, ol {
 .link {
     color: #4A1A76;
 }
+
+.bold {
+    font-weight: 600;
+}
+
+.four-oh-four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+.four-oh-four h1 {
+    font-size: 60px;
+    margin-bottom: 2rem;
+    color: #4A1A76;
+}
+
+.four-oh-four h2 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.four-oh-four p {
+    font-size: 20px;
+}
+
+
 @media (max-width: 1300px) {
 
     .ap-text {
@@ -228,9 +259,24 @@ ul, ol {
     }
 }
 
+@media (max-width: 600px) {
+    
+    .four-oh-four h1 {
+        font-size: 35px;
+    }
+    
+    .four-oh-four h2 {
+        font-size: 25px;
+    }
+    
+    .four-oh-four p {
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 400px) {
     .ap-header {
         font-size: 28px;
     }
+   
 }

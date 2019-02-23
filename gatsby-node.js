@@ -20,8 +20,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
 
-    const blogPostTemplate = path.resolve("src/templates/blog.js")
-    const tagTemplate = path.resolve("src/templates/tags.js")
+    const blogPostTemplate = path.resolve("src/templates/blog.js");
+    const tagTemplate = path.resolve("src/templates/tags.js");
+    const blogListTemplate = path.resolve('src/templates/blog-list.js');
   
   
     return new Promise((resolve, reject) => {
@@ -56,6 +57,24 @@ exports.createPages = ({ graphql, actions }) => {
                 slug: node.fields.slug,
                 },
             })
+        })
+
+        //Pagination
+        const postPerPages = 6;
+        const numOfPages = Math.ceil(posts.length / postPerPages);
+
+        Array.from({ length: numOfPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `blog` : `blog/${i + 1}`,
+            component: blogListTemplate,
+            context: {
+              limit: postPerPages,
+              skip: i * numOfPages,
+              numOfPages,
+              currentPage: i + 1
+            }
+
+          })
         })
 
          // Tag pages:
