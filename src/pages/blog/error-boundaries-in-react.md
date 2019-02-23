@@ -5,7 +5,7 @@ description: Error boundaries help us to
 tags: ["react", "javascript"]
 ---
 
-![](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517490342/logo-og_lxw2ze.png)
+![React](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517490342/logo-og_lxw2ze.png)
 
 A React App is usually one big component made up of smaller components. This makes for easy organization of code. A problem arises though when any of these smaller components has an error. What happens? The whole app crashes. Sad Story huh? Well, it doesn't have to be that way.
 
@@ -119,7 +119,7 @@ Note that the place where you place the error boundary in your code determines w
 
 If there's an error, here's the display you get. Notice that unlike the previous image, the `input` does not appear. Kindly ignore the uneven spacing. :)
 
-![](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_187_tfkkom.png)
+![Todo App with error boundary component](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_187_tfkkom.png)
 
 Ideally, an error boundary component is declared once and then used throughout an application.
 
@@ -173,7 +173,7 @@ The first parameter is the actual error thrown. The second parameter is an objec
 
 What we did is modify our state to capture the error and info. Then display this error message and info in the fallback UI. When there's an error, here's what we get. 
 
-![](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_188_b8t90i.png)
+![Todo app with error boundary component and error log](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_188_b8t90i.png)
 
 You can also log the error gotten to an error reporting service.
 

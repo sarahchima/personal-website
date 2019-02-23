@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: {Potrait},
+                content: `https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg``,
               },
               {
                 name: `twitter:card`,
@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `twitter:image`,
-                content: {Potrait},
+                content: `https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg`,
               },
             ]
               .concat(
