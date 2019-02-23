@@ -11,6 +11,7 @@ export default () => (
         <SEO 
             title={` `}
             keywords={[`Front-End Engineer`, `UI`, `Developer`, `CSS`, `JavaScript`]}
+            description={`Welcome to Sarah Chima's website`}
         />
         <div className="ap">
             <picture className="ap-picture">
