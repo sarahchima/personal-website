@@ -4,7 +4,9 @@ import Layout from "../components/layout"
 import Footer from '../components/footer'
 import SEO from '../components/seo'
 
+import 'prismjs/themes/prism-okaidia.css';
 import '../components/blog.css'
+
 
 export default ({ data }) => {
 	const post = data.markdownRemark

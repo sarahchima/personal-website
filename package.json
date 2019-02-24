@@ -16,8 +16,10 @@
     "gatsby-cli": "^2.4.10",
     "gatsby-plugin-google-analytics": "^2.0.14",
     "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-remark-prismjs": "^3.2.4",
     "gatsby-source-filesystem": "^2.0.22",
-    "gatsby-transformer-remark": "^2.1.18",
+    "gatsby-transformer-remark": "^2.2.6",
+    "prismjs": "^1.15.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"

@@ -19,17 +19,17 @@ The JavaScript map method takes an array(Array 1) and creates a new array(Array 
 
 Let us use our regular for-loop to show that the map function does. A classic example is if we want an array of the square of all elements in a given array, we could do this using a for-loop as seen in the example below:
 
-```
-    const array = [2, 5, 9];
-    let squares = [];
+```js
+const array = [2, 5, 9];
+let squares = [];
 
-    for (let i = 0; i < array.length; i++) {
-        squares.push(array[i] * array[i]));
-    }
+for (let i = 0; i < array.length; i++) {
+    squares.push(array[i] * array[i]));
+}
 
-    console.log(squares); // [4, 25, 81]
-    console.log(array); // [2, 5, 9]
-    
+console.log(squares); // [4, 25, 81]
+console.log(array); // [2, 5, 9]
+
 ``` 
 
 What does the above achieve? It loops through an array, finds the square of each element in the array and pushes it to the squares array that was earlier defined.
@@ -38,12 +38,12 @@ This is similar to what the map function achieves only that you do not need to d
 
 P.S: Arrow functions are used in the example. If you do not fully understand its syntax, please refer to [this article](https://dev.to/sarah_chima/arrow-functions-in-es6-24) on it.
 
-```
-    const array = [2, 5, 9];
-    let squares = array.map((num) => num * num);
+```javascript
+const array = [2, 5, 9];
+let squares = array.map((num) => num * num);
 
-    console.log(squares); // [4, 25, 81]
-    console.log(array); // [2, 5, 9]
+console.log(squares); // [4, 25, 81]
+console.log(array); // [2, 5, 9]
 ```
 
 Notice how much easier it to use the map method and still accomplish the same thing. Also, note that the initial array remains the same, this is especially useful in functional programming. Now let us dig a little deeper into the map method.
@@ -52,10 +52,10 @@ Notice how much easier it to use the map method and still accomplish the same th
 
 The syntax of the map function is as follows:
 
-```
-    let newArray = array.map((currentValue, index, array) => {
-        // return element to new Array
-    });
+```javascript
+let newArray = array.map((currentValue, index, array) => {
+    // return element to new Array
+});
 ```
 
 <ul>
@@ -90,16 +90,16 @@ In addition to the example used before, here are some other examples of things y
     
 We want to extract certain values from an array of objects. For instance, in a array of girls, we want to get the ages of the girls.
 
-```
-    const girls = [
-       {name: 'Sarah', age: 19},
-       {name: 'Laura', age: 10},
-       {name: 'Jessy', age: 29},
-       {name: 'Amy', age: 23}];
+```javascript
+const girls = [
+    {name: 'Sarah', age: 19},
+    {name: 'Laura', age: 10},
+    {name: 'Jessy', age: 29},
+    {name: 'Amy', age: 23}];
 
-    let girlsAges = girls.map((girl) => girl.age);
+let girlsAges = girls.map((girl) => girl.age);
 
-    console.log(girlsAges);  //[19, 10, 29, 23]
+console.log(girlsAges);  //[19, 10, 29, 23]
     
 ```
 
@@ -107,29 +107,29 @@ We want to extract certain values from an array of objects. For instance, in a a
 
 If we want to the callback to only be applied to certain elements in an array, say odd numbers, we can use an if statement to do this.
 
-```
-    const numbers = [4, 9, 36, 49];
+```javascript
+const numbers = [4, 9, 36, 49];
 
-    let oddSquareRoots = numbers.map((num) => {
-       if(num % 2 != 0) {
-           return Math.sqrt(num)     
-       }
-       return num;
-    })
+let oddSquareRoots = numbers.map((num) => {
+    if(num % 2 != 0) {
+        return Math.sqrt(num)     
+    }
+    return num;
+})
 
-    console.log(oddSquareRoots);
+console.log(oddSquareRoots);
 ```
 
 or using ternary operators
 
-```
-    const numbers = [4, 9, 36, 49];
+```javascript
+const numbers = [4, 9, 36, 49];
 
-    let oddSquareRoots = numbers.map((num) => {
-       return num % 2 !== 0 ? Math.sqrt(num) : num 
-    })
+let oddSquareRoots = numbers.map((num) => {
+    return num % 2 !== 0 ? Math.sqrt(num) : num 
+})
 
-    console.log(oddSquareRoots);
+console.log(oddSquareRoots);
 ```
 
 However, a more efficient way to achieve this is using the JavaScript Array Filter method. This will be discussed in my next post.

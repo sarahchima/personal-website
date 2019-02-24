@@ -9,7 +9,7 @@ import './navbar.css'
 export default class Navbar extends React.Component {
 
     state = {
-        showMobileMenu: true
+        showMobileMenu: false
     }
 
     componentDidMount() {
@@ -19,13 +19,13 @@ export default class Navbar extends React.Component {
 
     resize = () => {
         let hideNavScreenSize = (window.innerWidth <= 767);
-        if (hideNavScreenSize) {
+        if (!hideNavScreenSize) {
             this.setState({
-                showMobileMenu: false
+                showMobileMenu: true
             });
         } else {
             this.setState({
-                showMobileMenu: true
+                showMobileMenu: false
             })
         }
     }

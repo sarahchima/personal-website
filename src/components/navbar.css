@@ -24,14 +24,18 @@
     font-size: 16px;
     line-height: 1.2;
     padding: 1rem 1.5rem;
+    border: 2px solid transparent;
+}
+
+
+.nav-link:hover,.nav-link:focus {
+    background-color: transparent;
+    border-color: #C7BFCF;
 }
 
 .nav-link.active {
     background-color: #C7BFCF;
-}
-.nav-link:hover,.nav-link:focus {
-    background-color: #C7BFCF;
-}
+} 
 
 @media (min-width: 768px) {
     .navbar-toggle {

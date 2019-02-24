@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './navbar'
 import SEO from '../components/seo'
 import './layout.css'
-
+import 'prismjs/themes/prism-solarizedlight.css'
 
 const Layout = ( {children} ) => (
     <div>
