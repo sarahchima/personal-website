@@ -13,7 +13,7 @@ Recently, I had the task of making an image popup on hover. This gif above descr
 
 We will be placing the two images side by side, the thumbnail image and the larger image as seen in the block of code below. So in your HTML file, add the following code and remember to properly link your image files.
 
-```
+```html
 <main>
   <ul>
     <li>
@@ -35,22 +35,21 @@ We will be placing the two images side by side, the thumbnail image and the larg
         </span>
     </li>
   </ul>
-</main>
-    
+</main> 
 ```
 
 Since we are using an unordered list, we will style the `ul` and `li` in our CSS to remove the list style. Also, we make all the list items to appear inline and the image to appear styled. To your CSS file linked to the HTML code add the following:
 
-```
-    ul {
-      display: flex;
-    }
+```css
+ul {
+	display: flex;
+}
 
-    li {
-      list-style-type: none;
-      padding: 10px;
-      position: relative;
-    }
+li {
+	list-style-type: none;
+	padding: 10px;
+	position: relative;
+}
 ```
 
 Now, this is how our page should look.
@@ -63,10 +62,10 @@ Now, this is how our page should look.
 Next, we will visually hide the larger image using absolute positioning. We will use the class we add to the `span` that the larger images were placed in.
 
 
-```
+```css
 .large {
-  position: absolute;
-  left: -9999px;
+	position: absolute;
+	left: -9999px;
 }
 ```
 
@@ -75,10 +74,10 @@ Now, only the smaller images will be left.
 ![Image of work so far](https://res.cloudinary.com/dvj2hbywq/image/upload/v1539359591/Screen-Shot-2018-10-12-at-4.48.17-PM-compressor_njes69.png)
 Let us add some styles to make the large images pop up when you hover over the smaller images.
 
-```
+```css
 li:hover .large {
-  left: 20px;
-  top: -150px;
+	left: 20px;
+	top: -150px;
 }
 ```
 
@@ -86,10 +85,10 @@ And that is all. When you hover over the small images, the large images appear.
 
 We can decide to do more by adding a box-shadow to the images and even text under for each image. I decided to add a shadow and give the large images a border radius.
 
-```
+```css
 .large-image {
-  border-radius: 4px;
-   box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);;
+  	border-radius: 4px;
+   	box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);;
 }
 ```
 

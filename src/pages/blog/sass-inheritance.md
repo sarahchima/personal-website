@@ -11,123 +11,119 @@ Organizing and maintaining large stylesheets becomes harder and more complex as 
 One awesome feature of Sass is the ability of selectors to inherit styles from another selector. To do this, we use the `@extend` directive. It's pretty amazing when you to use. Let's do that using a simple example.
  
 
-```SCSS
+```css
+.foo {
+    height: 30px;
+}
 
-   .foo {
-        height: 30px;
-    }
-
-    .bar {
-        @extend foo;
-        width: 10px;
-    }
+.bar {
+    @extend foo;
+    width: 10px;
+}
 
 ```
 It's quite easy to use. It's similar to the way mixins are used but the magic happens when the SCSS is compiled. This is compiled to
 
-```CSS
+```css
+.foo, .bar {
+    height: 30px; }
 
-   .foo, .bar {
-      height: 30px; }
-
-   .bar {
-      width: 10px; }
+.bar {
+    width: 10px; }
 
 ```
 You notice that `.bar` inherits all the  of `.foo` and has its own properties. This reduces the amount of CSS code and thus reduces the file size. Let's use a more practical example.
 
 Here, we want to create various buttons that have the same base styles but vary only in color. Instead of writing the properties over and over again, we'll create a base class that contains the common styles which each button contains and then each button inherits this styles. This is seen in the example below.
 
-```SCSS
-    .button {
-        height: 30px;
-        font-size: 16px;
-        padding: 0 2rem; 
-        border-radius: 4px;
-    }
-   
-    .button-default {
-        @extend .button;
-        color: #404040;
-        border: 1px solid #404040;
-    } 
+```css
+.button {
+    height: 30px;
+    font-size: 16px;
+    padding: 0 2rem; 
+    border-radius: 4px;
+}
 
-    .button-success {
-        @extend .button;
-        background: green;
-        color: white; 
-    }
-    
-    .button-danger {
-        @extend .button;
-        background: red;
-        color: white;
-    }
+.button-default {
+    @extend .button;
+    color: #404040;
+    border: 1px solid #404040;
+} 
+
+.button-success {
+    @extend .button;
+    background: green;
+    color: white; 
+}
+
+.button-danger {
+    @extend .button;
+    background: red;
+    color: white;
+}
     
 ```
 This is compiled to
 
-```CSS
-    .button, .button-default, .button-success, .button-danger {
-        height: 30px;
-        font-size: 16px;
-        padding: 0 2rem;
-        border-radius: 4px; }
+```css
+.button, .button-default, .button-success, .button-danger {
+    height: 30px;
+    font-size: 16px;
+    padding: 0 2rem;
+    border-radius: 4px; }
 
-    .button-default {
-        color: #404040;
-        border: 1px solid #404040; }
+.button-default {
+    color: #404040;
+    border: 1px solid #404040; }
 
-    .button-success {
-        background: green;
-        color: white; }
+.button-success {
+    background: green;
+    color: white; }
 
-    .button-danger {
-        background: red;
-        color: white; }
+.button-danger {
+    background: red;
+    color: white; }
 
 ```
 I guess we clearly know how to use the `@extend` directive for inheritance now. Note that you can extend other selectors like ids, tags, and even pseudo-classes. It is also possible to inherit the properties of a selector that inherited the properties of another selector. If that sounds confusing just look at the example below.
 
-```SCSS
-    
-    .button {
-       height: 30px;
-       font-size: 16px;
-       padding: 0 2rem; 
-       border-radius: 4px;
-    }
+```css    
+.button {
+    height: 30px;
+    font-size: 16px;
+    padding: 0 2rem; 
+    border-radius: 4px;
+}
 
-    .button-default {
-        @extend .button;
-        color: #404040;
-        border: 1px solid #404040;
-    } 
-    
-    .button-default-blue {
-        @extend .button-default;
-        background: blue;
-    }
-    
+.button-default {
+    @extend .button;
+    color: #404040;
+    border: 1px solid #404040;
+} 
+
+.button-default-blue {
+    @extend .button-default;
+    background: blue;
+}
+
 ```
 Here, the `button-default` inherits the properties of `button` while `button-default-blue` inherits the properties for `button-default`. This means that `button-default-blue` inherits the properties of both `button` and `button-default`. This is called chaining. 
 
 The SCSS above is compiled to
 
-```CSS
+```css
+.button, .button-default, .button-default-blue {
+    height: 30px;
+    font-size: 16px;
+    padding: 0 2rem;
+    border-radius: 4px; }
 
-    .button, .button-default, .button-default-blue {
-        height: 30px;
-        font-size: 16px;
-        padding: 0 2rem;
-        border-radius: 4px; }
+.button-default, .button-default-blue {
+    color: #404040;
+    border: 1px solid #404040; }
 
-    .button-default, .button-default-blue {
-        color: #404040;
-        border: 1px solid #404040; }
-
-    .button-default-blue {
-        background: blue; }
+.button-default-blue {
+    background: blue; }
 ```
 Let us now consider the good using inheritance can do to our stylesheets.
 
@@ -141,21 +137,19 @@ Another advantage of inheritance is that we don't have to write so many classes 
 
 ```HTML
 
-    <button class="button button-default">Example</button>
+<button class="button button-default">Example</button>
    
 ```
 But with the inheritance, we'll use just one class. 
 
 ```HTML
-
-    <button class="button-default">Example</button>
-
+<button class="button-default">Example</button>
 ```
 Now, this may seem pretty small because we are using just two classes but it if you have to use many other classes, it gets messy. Like this below.
 
 ```HTML
  
-    <button class="button button-default button-default-blue button-default-disabled ">Example</button>
+<button class="button button-default button-default-blue button-default-disabled ">Example</button>
    
 ```
 If inheritance is properly used, it clearly reduces the number of classes we use in our HTML code. This leads to a cleaner HTML code and one that is easy to debug and maintain. These advantages save time and effort for developers. Next, let's consider some general tips for using inheritance.

@@ -28,56 +28,56 @@ So, you can see that we have four components that make up our app. These are ;
 The next step is to create a static version of the app. This will be done using JSX and CSS. This version contains no interactivity at all. No states, just the basic user interface as seen in the image. This version will contain no other method apart from the render method.
 Here's the code for this.
 
-```
-    import React from "react";
-    import ReactDOM from "react-dom";
-    
-    class TagInput extends React.Component {
-      render () {
-        return (
-          <form>
-            <input  placeholder = "Add a tag"/>
-          </form>
-        );
-      }
-    }
+```js
+import React from "react";
+import ReactDOM from "react-dom";
 
-    class Tag extends React.Component {
-      render () {
-        return (
-          const name = this.props.name;
-          <li>{name}
-            <button>X</button>
-          </li>
-        )
-      }
-    }
+class TagInput extends React.Component {
+	render () {
+		return (
+			<form>
+				<input  placeholder = "Add a tag"/>
+			</form>
+		);
+	}
+}
 
-    class TagList extends React.Component {
-      render() {
-         return (
-            <ul>
-            
-            </ul>
-         );
-      }
-    }
+class Tag extends React.Component {
+	render () {
+		return (
+			const name = this.props.name;
+			<li>{name}
+				<button>X</button>
+			</li>
+		)
+	}
+}
 
-    class TagApp extends React.Component {           
-      render() {
-        return (
-          <div className = "tagComponent">
-            <h2>Tag It</h2>
-            <div className = "tagBox">
-              <TagInput  />
-              <TagList />
-            </div>
-          </div>
-          )
-       }
-    }
+class TagList extends React.Component {
+	render() {
+		return (
+		<ul>
+		
+		</ul>
+		);
+	}
+}
 
-    ReactDOM.render(<TagApp />, document.getElementById("app"));
+class TagApp extends React.Component {           
+	render() {
+		return (
+			<div className = "tagComponent">
+				<h2>Tag It</h2>
+				<div className = "tagBox">
+					<TagInput  />
+					<TagList />
+				</div>
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(<TagApp />, document.getElementById("app"));
 ```
 
 The code above will create the simple user interface with no interactivity at all. 
@@ -102,143 +102,146 @@ Siblings cannot directly pass data to themselves. If a `child` component wants t
 
     
 The `Tag` uses `this.props.name` for its innertext and changes the state of the its parent (`TagList`) when the delete button is clicked. Let's add these features to the `Tag`.
-```javascript
-    class Tag extends React.Component {
-      constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-      }
 
-      //uses this.props.onClick to update the state of its parent when clicked.
-      handleClick () {
-        const tagName = this.props.name;
-        this.props.onClick(tagName);
-      }
-  
-      render () {
-        return (
-          <li>{this.props.name}
-            <button onClick = {this.handleClick}>X</button>
-          </li>
-        )
-      }
-    }
+```javascript
+class Tag extends React.Component {
+	constructor(props) {
+		super(props);
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	//uses this.props.onClick to update the state of its parent when clicked.
+	handleClick () {
+		const tagName = this.props.name;
+		this.props.onClick(tagName);
+	}
+
+	render () {
+		return (
+			<li>{this.props.name}
+			<button onClick = {this.handleClick}>X</button>
+			</li>
+		)
+	}
+}
 ```
+
 How does clicking of the button work? When the button is clicked, `handleClick` simply gets the `name` of the Tag and passes the value to the `onCl ick` property which is a method defined in its parent component, `TagList` Component. 
 
 In the `TagList` Component, we create a method that is used by the `Tag` component to remove a tag that was deleted. This method is then passed to each `Tag` component through the `onClick` property.
+
 ```javascript
-    class TagList extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = {list : this.props.value};
-        this.handleClick = this.handleClick.bind(this);
-      }
-      
-      //This is the method that is used by the Tag component
-      handleClick(tag) {
-        let list = this.state.list;
-        for (let i = 0; i < list.length; i++) {
-          if (list[i] == tag) {
-            list.splice(i, 1);
-          }
-        }
-         const newList = list; 
-         this.setState({list : newList});
-      }
-  
-      render() {
-         const displayList = this.state.list;
-         let tagList = displayList.map((tags, i) => 
-            <Tag key={'item' + i} name = {tags} onClick = {this.handleClick} />
-         );
-         return (
-            <ul>
-                {tagList}
-            </ul>
-         );
-      }
-    }
+class TagList extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {list : this.props.value};
+		this.handleClick = this.handleClick.bind(this);
+	}
+	
+	//This is the method that is used by the Tag component
+	handleClick(tag) {
+		let list = this.state.list;
+		for (let i = 0; i < list.length; i++) {
+			if (list[i] == tag) {
+			list.splice(i, 1);
+			}
+		}
+		const newList = list; 
+		this.setState({list : newList});
+	}
+
+	render() {
+		const displayList = this.state.list;
+		let tagList = displayList.map((tags, i) => 
+			<Tag key={'item' + i} name = {tags} onClick = {this.handleClick} />
+		);
+		return (
+			<ul>
+				{tagList}
+			</ul>
+		);
+	}
+}
 ```
 
 The `TagList` also depends on the state of its parent component, which is the `TagApp` component. The state of the `list` was initialized to `this.props.value`. `this.props.value` is a `props` that will be passed on this `TagList` by the `TagApp`. Before we go further on this, let's discuss the interactions of the `TagInput`.
 
-```Javascript
-    class TagInput extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = {value : ""};
-        this.handleInput = this.handleInput.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-      }
-  
-      handleChange(event) {
-        this.setState({value: event.target.value});
-      }
-  
-      handleSubmit() {
-        event.preventDefault();
-        const input = this.state.value;
-        if (input == "") {
-           return;
-        }
-        this.setState({value : ""});
-        this.props.onChange(input);
-      }
-  
-      render () {
-        return (
-          <form onSubmit = {this.handleSubmit}  >
-            <input value = {this.state.value} onChange = {this.handleChange} placeholder = "Add a tag"/>
-          </form>
-        );
-      }
-    }
+```javascript
+class TagInput extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {value : ""};
+		this.handleInput = this.handleInput.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({value: event.target.value});
+	}
+
+	handleSubmit() {
+		event.preventDefault();
+		const input = this.state.value;
+		if (input == "") {
+			return;
+		}
+		this.setState({value : ""});
+		this.props.onChange(input);
+	}
+
+	render () {
+		return (
+			<form onSubmit = {this.handleSubmit}  >
+			<input value = {this.state.value} onChange = {this.handleChange} placeholder = "Add a tag"/>
+			</form>
+		);
+	}
+}
 ```
 First the `TagInput` sets initializes a state for value. This will be updated by the `handleChange` method as the value in the input field is changed. When the form is submitted, the `handleSubmit()` method takes the value of `this.state.value`, checks if it's a valid input and then passes this input to the method `this.props.onChange` which is a method that is passed on to it by the parent component `TagApp` that will be used to update the state of `TagApp`.
 
 The final component we will work on is the `TagApp` component, which contains and interacts with its children components, `TagList` and `TagInput` components. It is this `TagApp` that `TagInput` uses to update the `TagList`.
 
 ```javascript
-    class TagApp extends React.Component {
-       constructor (props) {
-          super(props);
-          this.state = {display : [], error : ""};
-          this.handleChange = this.handleChange.bind(this);
-       }
-       
-       //checks if newInput is already on the list, if not, adds newInput to list.
-       handleChange(newInput) {
-          const isTag =(array, tag) => {
-              for (let a = 0; a < array.length; a++) {
-                  if (array[a] == tag) {
-                  return true;
-                  }
-              }
-            }
-          const tagsArray = this.state.display;
-            if (!isTag(tagsArray, newInput)) { 
-              tagsArray.push(newInput);
-              this.setState({display : tagsArray, error : ""});
-            }
-            else {
-              this.setState({error :"You've already added that tag"})
-            }
-           }
-                           
-          render() {
-              return (
-                  <div className = "tagComponent">
-                     <h2>Tag It</h2>
-                     <div className = "tagBox">
-                        <TagInput onChange = {this.handleChange} />
-                        <p>{this.state.error}</p>
-                        <TagList value = {this.state.display}/>
-                    </div>
-                  </div>
-              )
-            }
-        }
+class TagApp extends React.Component {
+	constructor (props) {
+		super(props);
+		this.state = {display : [], error : ""};
+		this.handleChange = this.handleChange.bind(this);
+	}
+	
+	//checks if newInput is already on the list, if not, adds newInput to list.
+	handleChange(newInput) {
+		const isTag =(array, tag) => {
+			for (let a = 0; a < array.length; a++) {
+				if (array[a] == tag) {
+				return true;
+				}
+			}
+		}
+		const tagsArray = this.state.display;
+		if (!isTag(tagsArray, newInput)) { 
+			tagsArray.push(newInput);
+			this.setState({display : tagsArray, error : ""});
+		}
+		else {
+			this.setState({error :"You've already added that tag"})
+		}
+	}
+						
+	render() {
+		return (
+			<div className = "tagComponent">
+				<h2>Tag It</h2>
+				<div className = "tagBox">
+					<TagInput onChange = {this.handleChange} />
+					<p>{this.state.error}</p>
+					<TagList value = {this.state.display}/>
+				</div>
+			</div>
+		)
+	}
+}
 ```
 
 The `TagApp` sets initializes state for `display`. This state is passed down to the value property of the `TagList` and determines what will be displayed by the `TagList`. This `handleChange` method is passed to the `TagInput` component and is used by this component to update `this.state.display` of the `TagApp`. 

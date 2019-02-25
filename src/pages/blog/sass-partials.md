@@ -31,14 +31,14 @@ Let's use an imaginary directory to explain this.
 In the directory, you can see the partials and the manifest file where all the partials will be imported into. In the manifest file you import the partials as shown below.
 
 ```CSS
-    //application.scss
+//application.scss
 
-    @import "reset";
-    @import "variables";
-    @import "functions";
-    @import "mixins";
-    @import "base";
-    @import "buttons";
+@import "reset";
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "base";
+@import "buttons";
 
 ``` 
 Notice that the `.scss` extension was not added. This is because Sass is smart enough to figure that it out.
@@ -62,16 +62,16 @@ All files do not have to be in the same folder though. You can arrange your file
 These files can then be imported in the main.scss file.
 
 ```CSS
-    //main.scss
+//main.scss
 
-    /* base */
-    @import "base/reset";
-    @import "base/typography";
-    
-    /* components */
-    @import "components/buttons";
-    @import "components/nav";
-    @import "components/dropdown";
+/* base */
+@import "base/reset";
+@import "base/typography";
+
+/* components */
+@import "components/buttons";
+@import "components/nav";
+@import "components/dropdown";
 ```
 
 Partials greatly helps us to organize our CSS files. Having an architecture for your project makes it much easier to break your CSS file into partial files. This leads to better maintenance and management of your CSS files.

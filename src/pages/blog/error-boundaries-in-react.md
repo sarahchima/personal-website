@@ -21,28 +21,28 @@ If you this doesn't really make sense to you yet, I think a practical example wi
 
 <h3>How to create an Error Boundary</h3>
 
-```Javascript
-    import React, {Component} from 'react';
-    import ReactDOM from 'react-dom';
+```javascript
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-    class ErrorBoundary extends React.Component {
-        constructor(props) {
-        super(props);
-        this.state = {hasError: false };
-    }
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {hasError: false };
+}
 
-    componentDidCatch(error, info) {
-        this.setState({hasError: true });
-    }
-  
-    render() {
-        if (this.state.hasError) {
-            return <h1>Oops!!! Something went wrong</h1>;
-        } else {
-            return this.props.children;
-            }
+componentDidCatch(error, info) {
+    this.setState({hasError: true });
+}
+
+render() {
+    if (this.state.hasError) {
+        return <h1>Oops!!! Something went wrong</h1>;
+    } else {
+        return this.props.children;
         }
-    } 
+    }
+} 
 
 ```
 
@@ -55,29 +55,26 @@ Let's put this error boundary to use.
 We are going to use part of a to-do app to explain this. Here's the full app on [CodePen](https://codepen.io/sayrah901/pen/dZRwZe). 
 
 ```javascript
+class ToDoApp extends React.Component {
+    ...
 
-    class ToDoApp extends React.Component {
-      ...
-
-      render() {
+    render() {
         return (
-          <div>
+            <div>
             <h2>ToDo</h2>
             <div>
-              <Input />
+                <Input />
 
-               //Error Boundary used here
-              <ErrorBoundary>
+                //Error Boundary used here
+                <ErrorBoundary>
                 <ToDoList />
-              </ErrorBoundary>
+                </ErrorBoundary>
 
             </div>
-          </div>
+            </div>
         );
-      }
-
     }
-
+}
 ```
 
 In the code above, you can see that the error boundary is used like a normal component and is wrapped around the `TodoList` component. If there's ever an error in this component or its children components, the error boundary component displays a fallback UI. Below is an image of the to-do app with no error.
@@ -94,25 +91,24 @@ Note that the place where you place the error boundary in your code determines w
 ```javascript
 
     class ToDoApp extends React.Component {
-      ...
+        ...
 
-      render() {
-        return (
-          <div>
-            <h2>ToDo</h2>
+        render() {
+            return (
             <div>
+                <h2>ToDo</h2>
+                <div>
 
-              //Error Boundary used here
-              <ErrorBoundary>
-                <Input />
-                <ToDoList />
-              </ErrorBoundary>
+                //Error Boundary used here
+                <ErrorBoundary>
+                    <Input />
+                    <ToDoList />
+                </ErrorBoundary>
 
+                </div>
             </div>
-          </div>
-        );
-      }
-
+            );
+        }
     }
 
 ```
@@ -129,45 +125,45 @@ Now, let's get back to the `componentDidCatch` method. It works like the Javascr
 
 The first parameter is the actual error thrown. The second parameter is an object with a `componentStack` property containing the component stack trace information. This is the path through your component tree from your application root all the way to the offending component. Let's modify our error boundary to make use of this parameters.
 
-```Javascript
+```javascript
 
-    import React, {Component} from 'react';
-    import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-    class ErrorBoundary extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = this.state = {
-               hasError : false,
-               error    : null,
-               info     : null
-            };
-        }
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = this.state = {
+            hasError : false,
+            error    : null,
+            info     : null
+        };
+    }
 
+    componentDidCatch(error, info) {
         componentDidCatch(error, info) {
-            componentDidCatch(error, info) {
-                this.setState({ 
-                  hasError : true, 
-                  error    : error,
-                  info     : info
-                });
+            this.setState({ 
+                hasError : true, 
+                error    : error,
+                info     : info
+            });
+        }
+    }
+  
+    render() {
+        if (this.state.hasError) {
+            return (
+                <div>
+                    <h1>Oops!!! Something went wrong</h1>
+                    <p>The error: {this.state.error.toString()}</p>
+                    <p>Where it occured: {this.state.info.componentStack}</p>
+                </div> 
+                );       
+            } else {
+            return this.props.children;
             }
         }
-  
-        render() {
-            if (this.state.hasError) {
-                return (
-                    <div>
-                        <h1>Oops!!! Something went wrong</h1>
-                        <p>The error: {this.state.error.toString()}</p>
-                        <p>Where it occured: {this.state.info.componentStack}</p>
-                    </div> 
-                   );       
-             } else {
-                return this.props.children;
-                }
-            }
-        } 
+    } 
 
 ```
 
@@ -177,18 +173,18 @@ What we did is modify our state to capture the error and info. Then display this
 
 You can also log the error gotten to an error reporting service.
 
-```Javascript
-    import React, {Component} from 'react';
-    import ReactDOM from 'react-dom';
+```javascript
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-    class ErrorBoundary extends React.Component {
-      ...
-        componentDidCatch(error, info) {
-            this.setState({hasError: true });
-            logErrorToService(error, info);
-        }
+class ErrorBoundary extends React.Component {
     ...
-    } 
+    componentDidCatch(error, info) {
+        this.setState({hasError: true });
+        logErrorToService(error, info);
+    }
+...
+} 
 
 ```
 

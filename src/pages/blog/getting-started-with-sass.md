@@ -24,47 +24,47 @@ For you to start using Sass, you need to set it up for your project. There are s
 2. Install [node-sass](https://www.npmjs.com/package/node-sass). Install node, if you've not done so on your local machine. Then `cd` into the project you want to use sass and run:
 
 ```
-    npm install node-sass
+npm install node-sass
 ```
 <b>Compiling SASS</b> 
 Since Sass is an extension of CSS, it has to be compiled into pure CSS for your browser to understand it. After installation, the basic way to do this is by running the following code in your command prompt.
 
 ```
-    sass input.scss output.css
+sass input.scss output.css
 ``` 
 Where `input.scss` is the input file and `output.css` is where you want the sass file to be compiled to, the destination file. Both of these files can be renamed to whatever you want and if they will be in different folders, you need to specify the path.
 
 If you followed any of the installation processes, here's a quick way to test what we installed. Create a file named test.scss in your project where you installed Sass. To that file add the code below. Don't worry if you don't understand the code, just use it as a test. You'll understand it soon.
 
-```CSS
-    $primaryColor : blue;
+```css
+$primaryColor : blue;
 
-    .test {
-        color : $primaryColor;
-    }
+.test {
+    color : $primaryColor;
+}
 ```
 Then on your command prompt run
 
 ```
-    sass test.scss output.css
+sass test.scss output.css
 ```
 This will create two files, `output.css` and `output.css.map`. In the `output.css` you should see this:
 
-```CSS
-    .test {
-      	color: blue; }
+```css
+.test {
+    color: blue; }
 ```
 If you've seen that, congrats, you have Sass all set up.
 
 Do you have run that line of code everytime you write new sass? Only if you want to. You can watch the files instead
 
-```
-   sass --watch input.scss:output.css
+```css
+sass --watch input.scss:output.css
 ```
 What this does is to automatically compile every sass you write in `input.scss` to `output.css` whenever any change is made. You can watch a directory too.
 
-```
-    sass --watch app/sass:public/css
+```css
+sass --watch app/sass:public/css
 ```
 
 This is the first of a series of articles I've written on SASS. Here are links to other articles on Sass by me:

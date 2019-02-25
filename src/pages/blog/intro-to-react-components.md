@@ -12,34 +12,34 @@ A component is a reusable chunk of code. Components make it possible to divide a
 
 We are going to create a component that welcomes people to a page. It is really basic but it is important that we  start with this so that we can easily understand how to create and render a component. Here's a [Codepen](https://codepen.io/sayrah901/pen/pWGQjq) of what we want to achieve.
 
-```  
-    import React from "react";
-    import ReactDOM from "react-dom";
-    
-    class Greeting extends React.Component {
-      render() {
-        return (
-          <div className = "box">
-            <h2> Hello Human Friend!!!</h2>
-            <p> We are so glad to have you here. </p>
-          </div>
-        );
-      }
-    }
+```js 
+import React from "react";
+import ReactDOM from "react-dom";
 
-    ReactDOM.render(<Greeting />, document.getElementById("app"));
+class Greeting extends React.Component {
+    render() {
+		return (
+			<div className = "box">
+				<h2> Hello Human Friend!!!</h2>
+				<p> We are so glad to have you here. </p>
+			</div>
+		);
+    }
+}
+
+ReactDOM.render(<Greeting />, document.getElementById("app"));
 ```
 
 It's okay if you don't understand what's going on in the code. I'll explain each part shortly. Let's start with the first part. 
 
-```
+```js
     import React from "react";
     import ReactDOM from "react-dom";
 ```
 
 `react` and `react-dom` are JavaScript libraries. `react` is the React library. It  contains methods that you need in order to use React. `react-dom` is a JavaScript library which contains several methods that deal with the DOM in some way.  What we are doing here is simply assigning these libraries to variables so that they can their methods can be used anywhere in our js file.
 
-```
+```js
     class Greeting extends React.Component {
       ...
 ```
@@ -52,13 +52,13 @@ To create this component class, you use a base class from the React library whic
 
 <b>Note</b>: This is not the only way to create a component. I just find this one more convenient.
 
-```
+```js
     render() {
         return (
-          <div className = "box">
-            <h2> Hello Human friend</h2>
-            <p> We are so glad to have you here. </p>
-          </div>
+			<div className = "box">
+				<h2> Hello Human friend</h2>
+				<p> We are so glad to have you here. </p>
+			</div>
         );
       }
     }
@@ -70,7 +70,7 @@ So in our component, the `render()` function will return an element which is the
 
 Finally,
 
-```
+```js
     ReactDOM.render(<Greeting />, document.getElementById("app"));
 ```
 

@@ -35,39 +35,39 @@ So first, we'll add an article element to an HTML file.
 Here's our CSS
 
 ```css
-    article {
-        max-width: 800px;
-        height: 300px;
-        overflow-y: hidden;
-    }
+article {
+    max-width: 800px;
+    height: 300px;
+    overflow-y: hidden;
+}
 
-    /* This class is added when button is clicked */
-    article.expanded {
-        height: 628px;
-    }
+/* This class is added when button is clicked */
+article.expanded {
+    height: 628px;
+}
 
-    button {
-        height: 41px;
-        padding: 0 2rem;
-    }
+button {
+    height: 41px;
+    padding: 0 2rem;
+}
 ```
 
 Then some JavaScript to power up the process
 
 ```javascript
-    const seeMore = document.getElementById("seeMoreBtn");
-    const article = document.getElementById("article");
-    
-    seeMore.addEventListener("click", () => {
-        article.classList.toggle("expanded");
+const seeMore = document.getElementById("seeMoreBtn");
+const article = document.getElementById("article");
 
-        const expanded = article.classList.contains("expanded");
-        if (expanded) {
-            seeMore.innerHTML = "See Less";
-        } else {
-            seeMore.innerHTML = "See More";
-        }
-    });
+seeMore.addEventListener("click", () => {
+    article.classList.toggle("expanded");
+
+    const expanded = article.classList.contains("expanded");
+    if (expanded) {
+        seeMore.innerHTML = "See Less";
+    } else {
+        seeMore.innerHTML = "See More";
+    }
+});
 ```
 
 Let's add some transition to our CSS to make the content slide up and down when the button is clicked.
@@ -75,12 +75,12 @@ Let's add some transition to our CSS to make the content slide up and down when 
 We'll add the transition property to the article element and thus the CSS becomes
 
 ```css
-    article {
-        max-width: 800px;
-        height: 300px;
-        overflow-y: hidden;
-        transition: height 0.4s linear;
-    }
+article {
+    max-width: 800px;
+    height: 300px;
+    overflow-y: hidden;
+    transition: height 0.4s linear;
+}
 ```
 
 And now the article slides up and down.
@@ -104,18 +104,18 @@ The good news about this is that there is a way around this without having to re
 The hack is to transition the `max-height` property instead of the `height` property. First, we have to estimate the greatest height our element can ever get.  We then set the element to have `max-height` greater than our estimate when the element is expanded. So let's revisit our CSS again. This time we'll change our `height` properties to `max-height`.
 
 ```css
-    article {
-        max-width: 800px;
-        max-height: 300px;
-        overflow-y: hidden;
+article {
+    max-width: 800px;
+    max-height: 300px;
+    overflow-y: hidden;
 
-        /*Transition time is increased to accomodate the height */
-        transition: max-height 0.7s linear;
-    }
+    /*Transition time is increased to accomodate the height */
+    transition: max-height 0.7s linear;
+}
 
-    article.expanded {
-        max-height: 1500px;
-    }
+article.expanded {
+    max-height: 1500px;
+}
 ```
 
 This way the animation works and we still get the effect we want. The transition time might have to be adjusted depending on the effect you want.

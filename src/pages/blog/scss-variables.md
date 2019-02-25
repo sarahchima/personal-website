@@ -15,55 +15,53 @@ Any property that will be repeated in a code such as a color or a size, usually 
 <h3><b>Using Variables</b></h3>
 In Scss, variables are declared by using any variable name preceded by a dollar sign, and are set like CSS properties.
 
-```SCSS
-    /* SCSS */
-    $height: 2rem;
+```cSS
+/* SCSS */
+$height: 2rem;
 ```
 
 `$height` can be used anywhere in your code.
 
-```SCSS
-    /* SCSS */
-    $height: 2rem;
-    
-    .button {
-        height: $height;
-    }
-    
+```cSS
+/* SCSS */
+$height: 2rem;
+
+.button {
+    height: $height;
+}
 ```
 This will be compiled to 
 
-```CSS
-    .button {
-        height: 2rem; }
-
+```css
+.button {
+    height: 2rem; }
 ```
 
 Let's do some more, this time with colors. 
 
 
-```SCSS
-    /* SCSS */
-    $gray: #a1a1a4;
-    $blue: #00aeef;
-    $red: #c05d5d;
+```css
+/* SCSS */
+$gray: #a1a1a4;
+$blue: #00aeef;
+$red: #c05d5d;
 
-    .button-success {
-        background-color: $blue;
-    }
+.button-success {
+    background-color: $blue;
+}
 
-    .button-danger {
-        background-color: $red;
-    }
+.button-danger {
+    background-color: $red;
+}
 ```
 This will be compiled to
 
-```CSS
-    .button-success {
-        background-color: #00aeef; }
+```css
+.button-success {
+    background-color: #00aeef; }
 
-    .button-danger {
-        background-color: #c05d5d; }
+.button-danger {
+    background-color: #c05d5d; }
 
 ```
 If ever I want to change the color code of any of these colors, I'll simply change it once and it will update everywhere I have used it.
@@ -91,49 +89,49 @@ Before we go any further, I think we should consider something important when us
 
 The scope of a variable simply means where a variable is available for use. In SCSS, there are two scopes:  global scope and local scope. If a variable has a global scope, it means it is available for use everywhere. A local scope is bounded by `{}`. So if a variable is declared within a `{}` and thus has a local scope, it is only available for use within that scope. Let's use examples to explain this.
 
-```SCSS
-    /* SCSS */
-    $width: 30px;
-    
-    .button {
-        $fontSize: 16px;
-        font-size: $fontSize;
-        width: $width;
-    }
+```css
+/* SCSS */
+$width: 30px;
 
-    .dropdown {
-        width: $width;
-    }
+.button {
+    $fontSize: 16px;
+    font-size: $fontSize;
+    width: $width;
+}
+
+.dropdown {
+    width: $width;
+}
 ```
 This will be compiled to
 
-```CSS
-    .button {
-        font-size: 16px;
-        width: 30px; }
+```css
+.button {
+    font-size: 16px;
+    width: 30px; }
 
-    .dropdown {
-        width: 30px; }
+.dropdown {
+    width: 30px; }
 ```
 Which of these variables have global scope? Did you say `$width`? If you did, you are correct. That is why it is available to both the `.button` and `.dropdown` class. 
 The `$fontSize` variable on the other hand, has a local scope. It is only available within `button` and any other selector nested within it. If we try to use `$fontSize` in `dropdown`, we will get an error `Undefined variable: "$font-size"`.
 
 Local variables take precedence over global variables. That is, if the same variable is declared globally and also within a local scope and is used within the local scope, the value of the variable will be that assigned to it within the local scope. So in our example above, let's re-declare `$width` within `.dropdown`, what will the width of the dropdown be? Let's find out.
 
-```SCSS
-    /* SCSS */
-    $width: 30px;
+```css
+/* SCSS */
+$width: 30px;
 
-    .dropdown {
-        $width: 50px;
-        width: $width;
-    }
+.dropdown {
+    $width: 50px;
+    width: $width;
+}
 ```
 This will be compiled to
 
-```CSS
-   .dropdown {
-       width: 50px; }
+```css
+.dropdown {
+    width: 50px; }
 ```
 
 So that explains it. The width becomes that of its local scope. 
@@ -141,30 +139,30 @@ So that explains it. The width becomes that of its local scope.
 <b>The !global flag</b> 
 It is possible to make variables that are declared locally to have a global scope. We use the `!global` flag to achieve this. Let's go back to our earlier example and try to use a variable declared in `.button` in `.dropdown` but this time with a `!global` flag.
 
-```SCSS
-    /* SCSS */
-    $width: 30px;
-    .button {
-        $fontSize: 16px !global; 
-        font-size: $fontSize;
-        width: $width;
-    }
+```css
+/* SCSS */
+$width: 30px;
+.button {
+    $fontSize: 16px !global; 
+    font-size: $fontSize;
+    width: $width;
+}
 
-    .dropdown {
-        font-size: $fontSize;
-        width: $width;
-    }
+.dropdown {
+    font-size: $fontSize;
+    width: $width;
+}
 ```
 This will be compiled to
 
-```CSS
-   .button {
-       font-size: 16px;
-       width: 30px; }
+```css
+.button {
+    font-size: 16px;
+    width: 30px; }
 
-   .dropdown {
-       font-size: 16px;
-       width: 30px; }
+.dropdown {
+    font-size: 16px;
+    width: 30px; }
 ```
 No error was returned this time. The `!global` flag just made `$fontSize` available for use everywhere. Let's consider another flag next.
 
@@ -172,9 +170,9 @@ No error was returned this time. The `!global` flag just made `$fontSize` availa
 
 When the `!default` flag is used when assigning a variable, we are simply saying that if this variable is not assigned elsewhere, make use of this value. It makes a value to act as a fallback. This can come in handy if we are creating custom variables that will be reused. Let's use an example. 
 
-```SCSS
-    $brand-color: #00aeef !default;
-    $brand-background: #000000 !default;
+```css
+$brand-color: #00aeef !default;
+$brand-background: #000000 !default;
 ``` 
 So if this variables don't get re-assigned elsewhere, these default values will be used.
 

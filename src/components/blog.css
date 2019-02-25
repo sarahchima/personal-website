@@ -269,6 +269,10 @@ pre[class*="language-"] {
     padding: 1.5em;
 }
 
+:not(pre) > code[class*="language-"] {
+    padding: .1em 0.5rem;
+}
+
 @media (max-width: 900px) {
     .a-main {
         display: block;

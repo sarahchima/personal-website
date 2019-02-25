@@ -39,13 +39,13 @@ Follow these steps to set it up:
 Install Create React App once globally so that you can use it to create React Apps anywhere on your machine. 
 
 ```
-    npm install -g create-react-app
+npm install -g create-react-app
 ```
 
 Once this is done, you can start creating awesome React Apps. So the next step is to actually create an app. You can do this by running
 
 ```
-    create-react-app name-of-your-project
+create-react-app name-of-your-project
 ```
 
 This might take a while to complete but when it is done, you will have a directory called `name-of-your-project` in the present folder.
@@ -53,7 +53,7 @@ Remember to change the name-of-your-project to whatever you want to call your pr
 
 The next thing to do is to cd into your folder
 ```
-    cd name-of-your-project
+cd name-of-your-project
 ```
 then
 

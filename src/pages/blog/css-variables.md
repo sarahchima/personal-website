@@ -38,8 +38,8 @@ Let's start with the first.
 
 The syntax for declaring custom properties is quite straightforward. Here's an example.
 
-```CSS
-    --primary-color: #00AEEF;
+```css
+--primary-color: #00AEEF;
 ```
 We just declared a custom property. Here are some things you should note about the syntax of custom properties.
 
@@ -52,81 +52,81 @@ Now that we know that, let's move on to discuss an important feature of custom p
 <b>The Cascade</b>
 Custom properties follow the normal cascading rules, so the same property can be defined or set at the different levels of specificity. It is important to note that custom properties do inherit. So if no value is set for a custom property on a given element, it inherits that of its parent. Look at an example.
 
-```CSS 
-    :root { --color: blue}
-    div { --color: green}
-    p{ --color: red}
-    
-    * { color: var(--color)}
+```css
+:root { --color: blue}
+div { --color: green}
+p{ --color: red}
+
+* { color: var(--color)}
 ```
 In the example above, the `div` and `p` element uses the color value re-assigned to the `--color` variable. Other elements which are not children of the `div` and `p` element will use the color of the `:root` pseudo-class which is their parent. 
 
 The cascade is important as it what enables us to set different values for the same variable with media queries. This is not possible with preprocessors. Let's use an example. 
 
-```CSS
-    --width: 80%
-    @media screen and (min-width: 768px) and (max-width: 1020px) {
-        --width: 60%;
-    }
-    @media screen and (min-width: 1020px) {
-        --width: 40%
-    }
+```css
+--width: 80%
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+    --width: 60%;
+}
+@media screen and (min-width: 1020px) {
+    --width: 40%
+}
 ```
 The variable `--width` is assigned different values and whenever that variable is used, the appropriate value for each screen size is used. This makes CSS variables extremely useful and aids responsive design. Enough about the syntax, let's move to the part where we actually use it.
 
 <b>Using CSS Variables </b>
 To use declared variables, we use the `var()` function. You might have seen in the first example in this article. What the `var()` function does is to take a variable and replace itself with the value of that variable. Here's an example.
 
-```CSS
-    --padding: 10px 20px;
-    
-    div {
-        padding: var(--padding);
-    }
+```css
+--padding: 10px 20px;
+
+div {
+    padding: var(--padding);
+}
 ```
 `var(--padding)` will be replaced with the `10px 20px`. The actual syntax for the `var` function is this:
 
-```CSS
-    var(<custom-property-name> [, <declaration-value> ]? )
+```css
+var(<custom-property-name> [, <declaration-value> ]? )
 ```
 Where `custom-property-name` is the name of the already declared variable like `--padding` in the previous example and `<declaration-value>` is a fallback value, i.e. a value that should be used if the referenced custom property is invalid. Look at an example below.
 
-```CSS
-    p {
-        font-family: var(--primary-font,  "sans-serif")
-    }
+```css
+p {
+    font-family: var(--primary-font,  "sans-serif")
+}
 ```
 So if the value of `--primary-font` is invalid or maybe it was never declared, the fallback font `sans-serif` is used. It is also possible to use more than one value as fallbacks. These values are separated by a comma. Let's rewrite our previous example.
 
-```CSS
-    p {
-        font-family: var(--primary-font, "Lato", "Roboto", "sans-serif")
-    }
+```css
+p {
+    font-family: var(--primary-font, "Lato", "Roboto", "sans-serif")
+}
 ```
 However in cases of shorthand values, like those used with margin and padding, the comma is not used to separate them. So an appropriate fallback is this:
 
-```CSS
-    p {
-        margin: var(--margin, 10px 20px 5px)
-    }
+```css
+p {
+    margin: var(--margin, 10px 20px 5px)
+}
 ```
 There's no need to separate them with commas. 
 
 <b>With the Calc() function</b>
 Custom properties can also be used with the CSS `calc()` function, this makes it more fun to use. The calc function is used to perform calculations in CSS. Let's see how it can be used with Custom properties.
 
-```CSS
-    :root {
-        --margin: 2rem;
-    } 
+```css
+:root {
+    --margin: 2rem;
+} 
 
-    div {
-        margin: calc(var(--margin) * 2);
-    }
-    
-    p {
-        margin: var(--margin)
-    }
+div {
+    margin: calc(var(--margin) * 2);
+}
+
+p {
+    margin: var(--margin)
+}
 ```
 
 <h3><b>Browser Support</b></h3>

@@ -21,86 +21,86 @@ We are all geared up to continue now.
 <b>String Interpolation</b>
 This is the problem that was mentioned at the beginning of the article. Let's remind ourselves of the pain.
 
-```Javascript
-    let name = "Sarah";
-    let job = "Developer";
-    let tools = "JavaScript and CSS";
+```javascript
+let name = "Sarah";
+let job = "Developer";
+let tools = "JavaScript and CSS";
 
-    console.log("My name is " + name + " and I am a " + job + ". I write " + tools + "." );//My name is Sarah and I am a Developer. I write JavaScript and CSS."
+console.log("My name is " + name + " and I am a " + job + ". I write " + tools + "." );//My name is Sarah and I am a Developer. I write JavaScript and CSS."
     
 ```
 Using ES6's template literals we will do this instead.
 
 
-```Javascript
-    let name = "Sarah";
-    let job = "Developer";
-    let tools = "JavaScript and CSS";
-    console.log(`My name is ${name} and I am a ${job} . I write ${tools}.`);//My name is Sarah and I am a Developer. I write JavaScript and CSS."
+```javascript
+let name = "Sarah";
+let job = "Developer";
+let tools = "JavaScript and CSS";
+console.log(`My name is ${name} and I am a ${job} . I write ${tools}.`);//My name is Sarah and I am a Developer. I write JavaScript and CSS."
 ```    
 See how much easier that was. Notice that backticks were used instead of quotes and the variables all appear within the dollar sign and curly braces. Let's do more with this.
 
 Let's embed a mathematical expression using template literals.
 
-```Javascript
-    console.log(`Jessy has ${5+3} cats and ${3+2} dogs.`)//"Jessy has 8 cats and 5 dogs."
+```javascript
+console.log(`Jessy has ${5+3} cats and ${3+2} dogs.`)//"Jessy has 8 cats and 5 dogs."
 ```
 We can also embed a function.
 
-```Javascript
-   let sayHello = () => "Hello";
+```javascript
+let sayHello = () => "Hello";
 
-   console.log(`${sayHello()}, it's the code girl next door.`);//"Hello, it's the code girl next door."
+console.log(`${sayHello()}, it's the code girl next door.`);//"Hello, it's the code girl next door."
 ```
 Let's do one more for fun.
 
-```Javascript
-   let sayName = () => "Template Literal";
-   let num = 5;
+```javascript
+let sayName = () => "Template Literal";
+let num = 5;
 
-   console.log(`I am a ${sayName()} and I am ${num *2}x more powerful.`);//"I am a Template Literal and I am 10x more powerful."
+console.log(`I am a ${sayName()} and I am ${num *2}x more powerful.`);//"I am a Template Literal and I am 10x more powerful."
 ```
 <b>Multi-line Strings</b>
 
 Remember  what `\n` in strings is used for? If you said to move to a new line... you are right. If you said the <b>only</b> way to move to a new line... uhmmm, you are not right. Template literals allows you to move to a new line by literally moving to a new line without using any character. So instead of doing this:
 
-```Javascript
-   console.log("I am the first line \n, I am the second line \n And I am the third line.");
+```javascript
+console.log("I am the first line \n, I am the second line \n And I am the third line.");
 ```
 We can simply do this:
 
-```Javascript
+```javascript
    console.log(`I am the first line,
  I am the second line
  And I am the third line.`);
 ```
 and get the same result.
 
-```Javascript
-   "I am the first line,
-    I am the second line
-    And I am the third line."
+```javascript
+"I am the first line,
+I am the second line
+And I am the third line."
 ```
 
 Super Cool!!!
 
 Let's use an example to see where all of these can be useful. We want to add HTML markup to a page using Javascript. Template literals makes it possible to do this in a very neat way. Look at the example below.
 
-```Javascript
-    const animal = {
-        kind: "Monkey",
-        food: "bananas", 
-        hobby: "jumping trees"
-    };
-   
+```javascript
+const animal = {
+    kind: "Monkey",
+    food: "bananas", 
+    hobby: "jumping trees"
+};
 
-   const display = `
-        <div class = "animal">
-            <h1>Hey, this is a ${animal.kind}</h1>
-            <p>It eats ${animal.food} and loves ${animal.hobby}</p>
-        </div>
-    `;
-    document.body.innerHTML = display;
+
+const display = `
+    <div class = "animal">
+        <h1>Hey, this is a ${animal.kind}</h1>
+        <p>It eats ${animal.food} and loves ${animal.hobby}</p>
+    </div>
+`;
+document.body.innerHTML = display;
 ```
 See how easy and neat this can be done with template literals. Cool right?
 My next article will be on tagged template literals. Stay Tuned.
