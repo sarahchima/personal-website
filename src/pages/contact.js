@@ -25,7 +25,7 @@ export default () => (
                             I also write technical articles on Frontend development.
                         </p>
                         <p>Do you need an experienced Frontend developer or someone to write awesome technical articles for your team?
-                            You can <a href="mailto:sarahchimao@gmail.com" className="link"><strong>send me an email</strong></a> or send a message via the form. Please give necessary details about you or your project in your message. I will reply as soon as possible. </p>
+                            I am currently available for part-time gigs. You can <a href="mailto:sarahchimao@gmail.com" className="link"><strong>send me an email</strong></a> or send a message via the form. Please give necessary details about you or your project in your message. I will reply as soon as possible. </p>
                     </article>
 
                     <article className="cp-article cp-article-others">
