@@ -56,7 +56,7 @@ export default ({ data }) => {
 				</aside>
 			</div>
 
-			<Link to={"/blog"} className="articles-link">← All Articles </Link>
+			<Link to={"/blog"} className="articles-link flex-center">← All Articles </Link>
 			<Footer />
         </Layout>
     )

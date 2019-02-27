@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Potrait from '../images/potrait2.jpg'
-
-
 function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery

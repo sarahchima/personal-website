@@ -61,7 +61,7 @@ export default ({ pageContext, data }) => {
                     <ul className="a-pagination">
                         {!isFirst && (
                             <li>
-                                <Link to={prevPage} rel="prev">
+                                <Link to={prevPage} rel="prev" className="flex-center">
                                 ← Newer
                                 </Link>
                             </li>
@@ -70,7 +70,7 @@ export default ({ pageContext, data }) => {
 
                         {!isLast && (
                             <li>
-                                <Link to={nextPage} rel="prev">
+                                <Link to={nextPage} rel="prev" className="flex-center">
                                 → Older
                                 </Link>
                             </li>

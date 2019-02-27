@@ -191,7 +191,7 @@ ul, ol {
 }
 
 .ap-text p {
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 18px;
 }
 .section {
@@ -204,6 +204,12 @@ ul, ol {
 
 .link {
     color: #4A1A76;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    min-height: 1px;
 }
 
 .bold {
@@ -247,7 +253,7 @@ ul, ol {
     }
 
     .ap-picture {
-        margin: 4rem auto 2rem;
+        margin: 2rem auto 4rem;
         max-width: 800px;
         width: 100%;
     }
@@ -272,11 +278,8 @@ ul, ol {
     .four-oh-four p {
         font-size: 18px;
     }
-}
 
-@media (max-width: 400px) {
     .ap-header {
         font-size: 28px;
     }
-   
 }

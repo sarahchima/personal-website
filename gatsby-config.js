@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-      title: `Sarah Chima`,
+      title: `Sarah Chima - Front-End Developer`,
       description: `Front-End Developer and Technical Writer from Nigeria.`,
       siteUrl: `https://www.gatsbyjs.org`,
       author: `Sarah Chima`,
