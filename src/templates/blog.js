@@ -10,13 +10,14 @@ import '../components/blog.css'
 
 export default ({ data }) => {
 	const post = data.markdownRemark
+	console.log(post.frontmatter)
 	const {title, date, tags, description } = post.frontmatter;
 	const keywords = tags.map(tag => tag);
 
     return (
       <Layout>
 		    <SEO 
-				title={title + " - "}
+				title={title + " -"}
 				keywords={keywords}
 				description={description}
         	/>
@@ -38,11 +39,11 @@ export default ({ data }) => {
 						<p className="ab-side-text">Be the first to know when I publish a new article. Fill the form below. I promise not to spam.</p>
 						<form action="https://sarahchima.us7.list-manage.com/subscribe/post?u=debf652409e37dd948f33287d&amp;id=53e01a2619" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
 							<p>
-								<label  for="mce-FNAME" style={{position: "absolute", left: "-5000px"}}>Name</label>
-								<input type="text" name="FNAME" class="ab-side-input" id="mce-FNAME" placeholder="First Name"/>
+								<label  htmlFor="mce-FNAME" style={{position: "absolute", left: "-5000px"}}>Name</label>
+								<input type="text" name="FNAME" className="ab-side-input" id="mce-FNAME" placeholder="First Name"/>
 							</p>
 							<p>
-								<label for="mce-EMAIL"style={{position: "absolute", left: "-5000px"}}>Email</label>
+								<label htmlFor="mce-EMAIL"style={{position: "absolute", left: "-5000px"}}>Email</label>
 								<input type="email" name="EMAIL" id="mce-EMAIL" className="ab-side-input required email" placeholder="Email Address" required/>
 							</p>
 							<input type="hidden" value="1" name="embed" />
@@ -70,7 +71,8 @@ export const query = graphql`
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
         title
-        tags
+				tags
+				description
       }
     }
   }
