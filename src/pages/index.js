@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import Potrait from '../images/potrait2.jpg'
 
-export default () => (
+export default (props) => (
     <Layout>
         <SEO 
             title={` `}
@@ -15,7 +16,7 @@ export default () => (
         />
         <div className="ap">
             <picture className="ap-picture">
-                <img className="ap-img" src={Potrait} alt="Sarah" />
+                <Img fixed={props.data.potrait.childImageSharp.fixed}  alt="Sarah" />
             </picture> 
             <article className="ap-text">
                 <h1 className="ap-header">Hi, I'm Sarah.</h1>
@@ -26,3 +27,17 @@ export default () => (
         </div>
     </Layout>
 )
+
+export const query = graphql`
+  query {
+    potrait : file(relativePath: { eq: "potrait2.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
