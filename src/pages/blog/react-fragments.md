@@ -1,6 +1,6 @@
 ---
 title: React Fragments
-date: "2019-03-06"
+date: "2019-03-11"
 description:  Learn what React modals are and how you can use them.
 tags: ["es6", "javascript", "react"]
 ---
