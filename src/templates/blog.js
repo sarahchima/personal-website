@@ -10,7 +10,7 @@ import '../components/blog.css'
 
 export default ({ data }) => {
 	const post = data.markdownRemark
-	const {title, date, tags } = post.frontmatter;
+	const {title, date, tags, description } = post.frontmatter;
 	const keywords = tags.map(tag => tag);
 
     return (
@@ -18,6 +18,7 @@ export default ({ data }) => {
 		    <SEO 
 				title={title + " - "}
 				keywords={keywords}
+				description={description}
         	/>
 			<div className="ab">
 				<div className="ab-content">
