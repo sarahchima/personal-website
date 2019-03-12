@@ -21,7 +21,7 @@ export default ({ pageContext, data }) => {
     return (
         <Layout>
             <SEO 
-                title={`Articles - Sarah Chima`}
+                title={`Articles`}
                 keywords={[`blog`, `gatsby`, `javascript`, `react`, `css`]}
             />
             <h1 className="a-header">The Articles </h1>
