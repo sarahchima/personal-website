@@ -53,13 +53,13 @@ Notice how we had to wrap the `label` and the `input` field in a `div`. We did t
 </form>
 ```
 
-Here are some issues related with this addition:
+Here are some issues related to this addition:
 
-1. Introducing an extra and unnecessary node into the DOM leads to more DOM clutter.  If we do this for a lot of other components, we will have so many extra nodes in the DOM. This might have very little impact in small applications. But in very large applications, performance is important. Adding extra DOM nodes lead to increased memory usage.  
+1. Introducing an extra and unnecessary node into the DOM leads to more DOM clutter.  If we do this for a lot of other components, we will have so many extra nodes in the DOM. This might have very little impact on small applications. But in very large applications, performance is important. Adding extra DOM nodes lead to increased memory usage.  
 
-2. It makes the use of CSS mechanisms like FlexBox and CSS Grid more complicated. These mechanisms depend on the relationship that exist between parent and child elements. So breaking such relationship by introducing an extra `div` makes styling more complicated.
+2. It makes the use of CSS mechanisms like FlexBox and CSS Grid more complicated. These mechanisms depend on the relationship that exists between parent and child elements. So breaking such relationship by introducing an extra `div` makes styling more complicated.
 
-The good news is that React fragments solves this problem. Let us see how.
+The good news is that React fragments solve this problem. Let us see how.
 
 <h3>Meet Fragments Officially </h3>
 
