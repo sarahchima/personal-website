@@ -41,7 +41,7 @@ a = 2;
 
 Makes sense right? Note that it is only declarations that the engine hoists, assignments are not hoisted. Variable declarations are hoisted and initialized with `undefined`. That is why we got `undefined` and not 2 because the assignment remained in the place it was assigned.
 
-Also, note that hoisting is per scope. So the variable will be available in the functional scope if we declare within a function.  It will be available in the global scope if it we declare it outside a function. If we use a variable outside the scope where it we declared it, it will return a `Reference Error`. For example, if we execute the code below, we get a reference error.
+Also, note that hoisting is per scope. So the variable will be available in the functional scope if we declare within a function.  It will be available in the global scope if we declare it outside a function. If we use a variable outside the scope where we declared it, it will return a `Reference Error`. For example, if we execute the code below, we get a reference error.
 
 ```js
 console.log(b); //Uncaught ReferenceError: b is not defined
