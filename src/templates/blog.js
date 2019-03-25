@@ -17,7 +17,7 @@ export default ({ data }) => {
     return (
       <Layout>
 		    <SEO 
-				title={title + " -"}
+				title={title }
 				keywords={keywords}
 				description={description}
         	/>
