@@ -2,7 +2,7 @@
 title: What is Hoisting Anyway?
 date: "2019-03-21"
 description: Learn what Hoisting in JavaScript is, how it works and what gets hoisted.
-tags: ["react", "javascript"]
+tags: ["es6", "javascript"]
 ---
 
 Hoisting is a term you come across from time to time as a JavaScript developer. Do you know what hoisting is and how it works? Well, let us find out if you do. In this article, we will discuss what hoisting is, how it works and what gets hoisted. 
