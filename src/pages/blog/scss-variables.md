@@ -2,6 +2,7 @@
 title: SASS Variables
 date: "2017-11-09"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css", "sass"]
 ---
 If you have no idea what SASS is, you should read [this article](https://dev.to/sarah_chima/sass--getting-started-bbc).

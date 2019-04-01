@@ -2,6 +2,7 @@
 title: Let's create a simple React App
 date: "2017-10-23"
 description: What is knowledge without practice? This article shows you how to build a simple tag adding app with React.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["react", "javascript"]
 ---
 

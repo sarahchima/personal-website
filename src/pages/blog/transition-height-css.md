@@ -2,6 +2,7 @@
 title: Using CSS Transitions on the Height Property
 date: "2018-04-18"
 description: How to successfully animate the height of an element using CSS transitions.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css", "webdev"] 
 ---
 

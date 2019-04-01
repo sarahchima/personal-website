@@ -2,6 +2,7 @@
 title: SASS Operators
 date: "2017-11-24"
 description: Arithmetic, conditional and logical operators in Sass
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["sass", "css"]
 ---
 

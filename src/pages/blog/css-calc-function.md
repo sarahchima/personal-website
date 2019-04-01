@@ -2,6 +2,7 @@
 title: "The CSS Calc Function"
 date: "2017-12-19"
 description: A discussion of the CSS calc function.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css"]
 ---
 

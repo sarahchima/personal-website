@@ -32,11 +32,13 @@ export default () => (
                         <h2>Other Relevant Links</h2>
 
                         <div className="cp-icons">
-                            <a href="https://www.instagram.com/sarah_codes_/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://codepen.io/sayrah901"><i class="fa fa-codepen"></i></a>
-                            <a href="https://twitter.com/sarah_chima"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/sarah-chima"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://github.com/sarahchima"><i class="fa fa-github"></i></a>
+                            <a href="https://www.instagram.com/sarah_codes_/"><i class="fa fa-instagram" title="sarah chima's instagram"></i></a>
+                            <a href="https://codepen.io/sayrah901"><i class="fa fa-codepen" title="sarah chima's codepen"></i></a>
+                            <a href="https://twitter.com/sarah_chima"><i class="fa fa-twitter" title="sarah chima's twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/sarah-chima"><i class="fa fa-linkedin" title="sarah chima's linkedin"></i></a>
+                            <a href="https://github.com/sarahchima"><i class="fa fa-github" title="sarah chima's github"></i></a>
+                            <a href="https://dev.to/sarah_chima"><i class="fab fa-dev" title="sarah_chima's DEV Profile"></i></a>
+      
                         </div>
                     </article>
 

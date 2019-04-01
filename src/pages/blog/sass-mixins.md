@@ -2,6 +2,7 @@
 title: Sass Mixins
 date: "2017-11-15"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css", "sass"]
 ---
 

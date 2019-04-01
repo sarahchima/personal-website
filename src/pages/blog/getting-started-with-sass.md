@@ -3,6 +3,7 @@ title: SASS - Getting Started
 date: "2017-11-08"
 description: 
 tags: ["css", "sass"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 
 

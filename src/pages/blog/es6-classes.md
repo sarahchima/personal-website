@@ -2,6 +2,7 @@
 title: ES6 classes
 date: "2017-10-27"
 description: ES6's new syntax for creating classes.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript"]
 ---
 

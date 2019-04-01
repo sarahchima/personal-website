@@ -3,6 +3,7 @@ title: Having a Good Relationship with CSS
 date: "2018-06-06"
 description: 
 tags: ["css"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 
 "CSS sucks!!",  "How can I get better at CSS?", "I get stuck on little CSS issues for a long time". Do any of these expressions describe your view on CSS? If yes, read on as I share my personal tips on how you can improve your relationship with CSS. I promise it will be brief and I will not bore you. Let me start by telling you a little about my love story with CSS.

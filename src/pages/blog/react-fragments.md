@@ -2,6 +2,7 @@
 title: React Fragments
 date: "2019-03-11"
 description:  Learn what React fragments are and how you can use them.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript", "react"]
 ---
 

@@ -2,6 +2,7 @@
 title: JPEG, GIF, PNG OR SVG - Which should You use?
 date: "2018-01-07"
 description: Image Formats are important. Here are key facts that can help you make a good choice.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["frontend"]
 ---
 

@@ -2,6 +2,7 @@
 title: SCSS Control Directives
 date: "2017-11-29"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css", "sass"]
 ---
 

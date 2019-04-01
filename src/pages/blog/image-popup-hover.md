@@ -2,6 +2,7 @@
 title: Image Popup on hover
 date: "2018-10-12"
 description: I learned how to make an image popup on hover and I decided to share.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css"]
 ---
 

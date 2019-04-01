@@ -3,6 +3,7 @@ title: Filter Arrays with the Javascript Filter() Method
 date: "2018-12-29"
 description: How to use the JavaScript filter method
 tags: ["javascript"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 
 Filtering unwanted elements to reduce the size of an array is fun right? JavaScript array filter method makes it even more fun.

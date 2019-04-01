@@ -3,7 +3,7 @@ title: The JavaScript Array Map() Method
 date: "2018-12-22"
 description: Understanding the Javascript Map function, when and how to use it.
 tags: ["javascript", "es6"] 
-cover_image: https://thepracticaldev.s3.amazonaws.com/i/z4y9rada74qyf288n90i.jpg
+featuredImage: https://thepracticaldev.s3.amazonaws.com/i/z4y9rada74qyf288n90i.jpg
 ---
 
 Ever wondered what the JavaScript array map method is? what it can do? or when it should be used? This is article is for you. Before we go any further, let us get a formal definition of the map method. 

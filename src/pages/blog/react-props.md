@@ -2,6 +2,7 @@
 title: React Properties
 date: "2017-10-20"
 description: Learn how to use props in React
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["react", "javascript"]
 ---
 

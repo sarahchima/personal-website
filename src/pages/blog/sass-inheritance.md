@@ -2,6 +2,7 @@
 title: The Goodness of SASS Inheritance
 date: "2017-11-21"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css", "sass"] 
 ---
 

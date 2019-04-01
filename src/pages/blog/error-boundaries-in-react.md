@@ -1,7 +1,7 @@
 ---
 title: Handling Errors in React Components with Error Boundaries
 date: "2018-02-01"
-description: Error boundaries help us to 
+description: Error boundaries help us to handle errors in React components gracefully
 tags: ["react", "javascript"]
 ---
 

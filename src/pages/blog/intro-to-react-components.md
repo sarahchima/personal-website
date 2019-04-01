@@ -2,6 +2,7 @@
 title: An Introduction to React Components
 date: "2017-10-19"
 description: Components make it possible to divide any user interface into resuable parts. Find out about them in this article.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["react", "javascript"]
 ---
 

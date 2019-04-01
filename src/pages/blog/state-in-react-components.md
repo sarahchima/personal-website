@@ -2,6 +2,7 @@
 title: Understanding State in React Components
 date: "2017-10-21"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["react", "javascript"]
 ---
 

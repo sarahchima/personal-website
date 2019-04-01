@@ -3,6 +3,7 @@ title: Getting Started With React in Super Easy Steps.
 date: "2017-10-17"
 description: Getting started with React is simple and this article shows you how to do that in easy steps.
 tags: ["javascript", "es6", "react"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 
 React recently got relicensed under MIT license. React 16 with its awesome new features was released a few weeks back. What a wonderful time to start learning and building cool projects with React! But to get started, you need to set up a development environment for React. This article will show you two easy ways you can do that. First of all though, let’s get a brief understanding of what React is.

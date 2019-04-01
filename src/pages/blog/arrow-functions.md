@@ -2,6 +2,7 @@
 title: Arrow Functions in ES6
 date: "2017-10-26"
 description: Arrow Functions in ES6
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["javascript", "es6"]
 ---
 

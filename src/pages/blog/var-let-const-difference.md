@@ -2,6 +2,7 @@
 title: Var, let and const- what's the difference?
 date: "2017-10-25"
 description: Learn the difference between JavaScript variable types.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript"]
 ---
 

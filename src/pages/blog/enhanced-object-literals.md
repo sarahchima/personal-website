@@ -2,6 +2,7 @@
 title: Enhanced Object Literals in ES6
 date: "2017-11-01"
 description: Enhanced object literals in ES6
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript"]
 ---
 

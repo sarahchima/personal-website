@@ -2,6 +2,7 @@
 title: What is Hoisting Anyway?
 date: "2019-03-25"
 description: Learn what Hoisting in JavaScript is, how it works and what gets hoisted.
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript"]
 ---
 

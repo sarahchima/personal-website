@@ -2,6 +2,7 @@
 title: An Introduction to CSS Variables 
 date: "2017-12-05"
 description: An introduction to CSS variables/ Custom Properties
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["css"]
 ---
 

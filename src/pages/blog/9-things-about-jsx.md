@@ -3,6 +3,7 @@ title: 9 Things you should know about JSX
 date: "2017-10-17"
 description: JSX is a syntax extension that is now popular. This article works you through nine facts about JSX that you should know.
 tags: ["react", "javascript"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 ```js
 const hello = <h1>Hello World</h1>

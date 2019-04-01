@@ -2,6 +2,7 @@
 title: The Virtual DOM in React
 date: "2017-10-18"
 description: How the virtual DOM works
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["react", "javascript"]
 ---
 

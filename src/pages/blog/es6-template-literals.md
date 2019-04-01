@@ -3,6 +3,7 @@ title: An Introduction to ES6 Template Literals
 date: "2017-11-03"
 description: 
 tags: ["es6", "javascript"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 ---
 
 

@@ -2,6 +2,7 @@
 title: Object Destructuring in ES6
 date: "2017-10-31"
 description: 
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
 tags: ["es6", "javascript"]
 ---
 

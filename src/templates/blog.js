@@ -11,7 +11,7 @@ import '../components/blog.css'
 export default ({ data }) => {
 	const post = data.markdownRemark
 	console.log(post.frontmatter)
-	const {title, date, tags, description } = post.frontmatter;
+	const {title, date, tags, description, featuredImage } = post.frontmatter;
 	const keywords = tags.map(tag => tag);
 
     return (
@@ -20,6 +20,7 @@ export default ({ data }) => {
 				title={title }
 				keywords={keywords}
 				description={description}
+				image={featuredImage}
         	/>
 			<div className="ab">
 				<div className="ab-content">
@@ -73,6 +74,7 @@ export const query = graphql`
         title
 				tags
 				description
+				featuredImage
       }
     }
   }
