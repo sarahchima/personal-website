@@ -66,3 +66,5 @@ Now that you have done all you can do and still not fixed it, you clearly need h
 
 6. Be grateful and show appreciation. The person that took time to help might have spent it working on his own tasks. Therefore, remember to always say thank you.
 
+<h3>Conclusion</h3>
+It is important to know when and how to ask for help. The tips shared in this article can help you do so.
