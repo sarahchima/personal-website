@@ -10,8 +10,7 @@ import '../components/blog.css'
 
 export default ({ data }) => {
 	const post = data.markdownRemark
-	console.log(post.frontmatter)
-	const {title, date, tags, description, featuredImage } = post.frontmatter;
+	const { title, date, tags, description, featuredImage } = post.frontmatter;
 	const keywords = tags.map(tag => tag);
 
     return (
@@ -20,7 +19,7 @@ export default ({ data }) => {
 				title={title }
 				keywords={keywords}
 				description={description}
-				image={featuredImage}
+				featuredImage={featuredImage}
         	/>
 			<div className="ab">
 				<div className="ab-content">

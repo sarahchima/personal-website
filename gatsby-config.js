@@ -4,6 +4,7 @@ module.exports = {
       description: `Front-End Developer and Technical Writer from Nigeria.`,
       siteUrl: `https://www.gatsbyjs.org`,
       author: `Sarah Chima`,
+      defaultImage: `https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg`
     },
     plugins: [
         {
