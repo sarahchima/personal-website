@@ -68,7 +68,7 @@ export default () => (
             <div class="projects-sec-container">
                 <div>
                     <picture class="project-sec ">
-                        <img class="header-img" alt="" src="http://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,h_646,w_778/v1532919673/personal-webiste/pomodoro.png" />
+                        <img class="header-img" alt="" src="https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,h_646,w_778/v1532919673/personal-webiste/pomodoro.png" />
                     </picture>
                     <h3><a href="https://codepen.io/sayrah901/full/vgZJMa/">Pomodoro Clock</a></h3>
                     <p>A Freecodecamp project based on the Pomodoro principle.</p>
@@ -76,7 +76,7 @@ export default () => (
                 </div>
                 <div>
                     <picture class="project-sec">
-                        <img class="header-img" alt="" src="http://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_778/v1532919664/personal-webiste/clock.png" />
+                        <img class="header-img" alt="" src="https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_778/v1532919664/personal-webiste/clock.png" />
                     </picture>
                     <h3><a href="https://codepen.io/sayrah901/full/dzQVmx/">Animated Clock</a></h3>
                     <p>I played with CSS animation and this was the result.</p>
@@ -84,7 +84,7 @@ export default () => (
                 </div>
                 <div>
                     <picture class="project-sec">
-                        <img class="header-img" alt="" src="http://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,h_646,w_778/v1532920306/Screen_Shot_2018-07-30_at_4.09.46_AM_t5zay1.png" />
+                        <img class="header-img" alt="" src="https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,h_646,w_778/v1532920306/Screen_Shot_2018-07-30_at_4.09.46_AM_t5zay1.png" />
                     </picture>
                     <h3><a href="https://codepen.io/sayrah901/full/eGXvzz/">Tag It</a></h3>
                     <p>I wrote several articles on React and decided to build this simple tag adder tool to demostrate how to build a React app. </p>

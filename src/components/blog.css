@@ -149,7 +149,10 @@ pre {
     max-width: 750px;
     overflow-x: scroll;
 }
-
+:not(pre) > code[class*="language-"] {
+    background: #e0e0e0;
+    color: #303030;
+}
 .ab-content {
     font-size: 18px;
     line-height: 1.5;
