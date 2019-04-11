@@ -60,9 +60,9 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         //Pagination
-        const postPerPages = 6;
-        const numOfPages = Math.ceil(posts.length / postPerPages);
+        const postPerPages = 7;
 
+        const numOfPages = Math.ceil(posts.length / postPerPages);
         Array.from({ length: numOfPages }).forEach((_, i) => {
           createPage({
             path: i === 0 ? `blog` : `blog/${i + 1}`,
