@@ -1,7 +1,7 @@
 ---
 title: A Guide to Handling Browser Events
 date: "2019-04-11"
-description: In this article, we will discuss ways browser events can be handle, default browser actions and event propagtaion.
+description: In this article, we will discuss ways browser events can be handled, default browser actions and event propagation.
 tags: ["javascript", "HTML"]
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_800/v1555007526/ambitious-creative-co-rick-barrett-110145-unsplash-compressor_hzty02.jpg
 ---
