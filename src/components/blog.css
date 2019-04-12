@@ -206,7 +206,7 @@ pre {
 }
 
 .ab-content img {
-    max-width: 750px;
+    max-width: 100%;
 }
 
 .ab-content ul {
