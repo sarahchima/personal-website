@@ -1,5 +1,5 @@
 ---
-title: A guide to Handling Browser Events
+title: A Guide to Handling Browser Events
 date: "2019-04-11"
 description: In this article, we will discuss ways browser events can be handle, default browser actions and event propagtaion.
 tags: ["javascript", "HTML"]
