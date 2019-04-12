@@ -1,12 +1,14 @@
 ---
-title: A guide to Handling Events in the Browser
+title: A guide to Handling Browser Events
 date: "2019-04-11"
-description: In this article, we will discuss way browser events can be handle.
-tags: ["javascript"]
+description: In this article, we will discuss ways browser events can be handle, default browser actions and event propagtaion.
+tags: ["javascript", "HTML"]
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_800/v1555007526/ambitious-creative-co-rick-barrett-110145-unsplash-compressor_hzty02.jpg
 ---
 
-<picture>!['An event center'](https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_800/v1555007526/ambitious-creative-co-rick-barrett-110145-unsplash-compressor_hzty02.jpg)
+<picture>
+
+!['An event center'](https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_800/v1555007526/ambitious-creative-co-rick-barrett-110145-unsplash-compressor_hzty02.jpg)
 
 <figcaption><span>Photo by <a href="https://unsplash.com/photos/HnUHOBuJ7s4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ambitious Creative Co.  - Rick Barrett</a> on <a href="/search/photos/event?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 </picture>
@@ -25,7 +27,7 @@ When an event occurs, we can tell the browser how to respond using event handler
 3. Using the addEventListener method
 
 ###Inline Event Handlers
-A handler can be set using an HTML attribute. For instance, if we want a button to alert 'hi' whenever it a user clicks the button we can do this:
+A handler can be set using an HTML attribute. For instance, if we want a button to alert 'hi' whenever a user clicks the button we can do this:
 
 ```html
 <button onclick="alert('hi')">Say Hi</button>
@@ -33,7 +35,7 @@ A handler can be set using an HTML attribute. For instance, if we want a button 
 
 We can also do this for a lot of other events using the same syntax. 
 
-Writing a lot of code in an HTML element might not be convenient. Another way to do this is to write a function in a script and call the function in the `on<event>` attribute. 
+Writing a lot of code in an HTML element might not be convenient. We can also write a function in a script and call the function in the `on<event>` attribute. 
 
 ```html
 <button onclick="sayHi()">Say Hi</button>
@@ -77,7 +79,7 @@ What happens when we apply an inline event handler and a JavaScript handler to t
 The JavaScript handler takes precedence over the inline handler so 'no' is logged.
 
 ###The addEventListener method
-We can the addEventListener method to listen for an event on a particular DOM element. Using this method, we provide a method that handles such an event. One advantage of this method is that it allows you to register as many events as possible on an element. 
+We can use the addEventListener method to listen for an event on a particular DOM element. Using this method, we provide a method that handles such an event. One advantage of this method is that it allows you to register as many events as possible on an element. 
 
 This is the syntax of the addEventListener method.
 
@@ -87,7 +89,7 @@ target.addEventListener(type, function, useCapture)
 
 Target is the element you want to listen for an event on.
 
-Type is the type of event you want to listen for. For example, if it is a button, you can listen for a click event. We will discuss more of this soon in this article.
+Type is the type of event you want to listen for. For example, if it is a button, you can listen for a click event. 
 
 The function is the event handler. It specifies the function is carried out when an event occurs.
 
@@ -111,7 +113,7 @@ In this case, `button` is my target, the type of event is `click`, the arrow fun
 A named function can also be passed as the callback function.
 
 ###The Event Object
-When an event occurs, the browser creates an event object and passes it as an argument to the event handler. This event object contains details of the event. For instance, you might want to know which button was clicked or which key was pressed or the mouse coordinates when the event occurred. You can get all of these from the event object. A simple way to see this object is by logging it into the console. 
+When an event occurs, the browser creates an event object and passes it as an argument to the event handler. This event object contains details of the event. For instance, you might want to know which button was clicked or which key was pressed or the mouse coordinates when the event occurred. You can get all of these from the event object.
 
 Using our example above, we can do this:
 
@@ -128,7 +130,7 @@ Using our example above, we can do this:
 
 ```
 
-It prints the x any y-coordinates of where the event occurred which in this is 41 and 19 respectively.
+It prints the x any y-coordinates of where the event occurred which in this case is 41 and 19 respectively.
 
 The information stored in the event depends on the type of event that occurred. To get full details of the event object, you can log the `event` object to the console `console.log(event)`. In any case, it always has a `type` property that tells the type of event that occurred. 
 
@@ -138,7 +140,7 @@ When an event occurs on some elements, there are actions that take place by defa
 Event handlers are called for most events before the default takes place. It is possible to prevent the default action using the `event.preventDefault()` method. This method stops the default action from taking place. Here is an example:
 
 ```html
-<a href="https://sarahchima.com">Sarah Chima</button>
+<a href="https://sarahchima.com">Sarah Chima</a>
 
 <script>
     let link = document.querySelector('a');
@@ -184,7 +186,7 @@ In capturing, the reverse occurs. The handler on the outermost element is trigge
 
 For event handlers, bubbling is the default but if the capture argument is set to true, then capturing occurs. To learn more about this, you can read [this article](https://javascript.info/bubbling-and-capturing) on it.
 
-You might not want this bubbling behaviour to occur when you click on an element. Thankfully, JavaScript provides a way to do so. To stop propagation, you can call the `event.stopPropagation()` method. This method prevents events from bubbling.
+You might not want this propagation behaviour to occur when you click on an element. Thankfully, JavaScript provides a way to do so. To stop propagation, you can call the `event.stopPropagation()` method. This method prevents events from propagating.
 
 In our previous example, we can do this:
 
@@ -251,4 +253,4 @@ If we do not store the function in a variable like in the example below, the `re
 
 We discussed how we can handle events using HTML attributes, DOM property and the addEventListener method. We saw that we can prevent default actions by using the `event.preventDefault` method. We also learnt about event propagation. 
 
-Handling events can help you control the way the browser responds to user actions and we have discussed how we can do this.
+Handling events can help you control the way the browser responds to user actions and we have discussed how we can do this. In my next article, I will discuss 10 common events that can occur in a browser.
