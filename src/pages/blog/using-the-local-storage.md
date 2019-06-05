@@ -3,7 +3,7 @@ title: Using the local storage
 date: "2019-06-03"
 description: In this article, we will discuss ways browser events can be handled, default browser actions and event propagation.
 tags: ["javascript", "HTML"]
-featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/c_scale,w_800/v1555007526/ambitious-creative-co-rick-barrett-110145-unsplash-compressor_hzty02.jpg
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1559713742/lena-de-fanti-1631459-unsplash-compressor_x0axeq.jpg
 ---
 
 This article discusses what the local storage is. We will also discuss JavaScript methods that we can use to manipulate it.
