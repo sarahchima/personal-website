@@ -6,6 +6,8 @@ tags: ["javascript", "HTML"]
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1559713742/lena-de-fanti-1631459-unsplash-compressor_x0axeq.jpg
 ---
 
+![](https://res.cloudinary.com/dvj2hbywq/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1559713742/lena-de-fanti-1631459-unsplash-compressor_x0axeq.jpg)
+
 This article discusses what the local storage is and JavaScript methods that we can use to manipulate it.
 
 I have always known about the local storage but I never got to use it on any project. So I decided to build a note app because I want to be able to use the local storage to store and manipulate data. I decided to share what I learnt while using it. First, let us understand what the local storage is.
