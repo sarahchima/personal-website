@@ -1,5 +1,5 @@
 ---
-title: Using the local storage
+title: Using the Local Storage
 date: "2019-06-04"
 description: This article discusses what the local storage is and JavaScript methods that we can use to manipulate it.
 tags: ["javascript", "HTML"]
