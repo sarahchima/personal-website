@@ -5,7 +5,7 @@ description: Error boundaries help us to handle errors in React components grace
 tags: ["react", "javascript"]
 ---
 
-![React](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517490342/logo-og_lxw2ze.png)
+![React](https://res.cloudinary.com/dvj2hbywq/image/upload/v1517490342/logo-og_lxw2ze.png)
 
 A React App is usually one big component made up of smaller components. This makes for easy organization of code. A problem arises though when any of these smaller components has an error. What happens? The whole app crashes. Sad Story huh? Well, it doesn't have to be that way.
 
@@ -79,11 +79,11 @@ class ToDoApp extends React.Component {
 
 In the code above, you can see that the error boundary is used like a normal component and is wrapped around the `TodoList` component. If there's ever an error in this component or its children components, the error boundary component displays a fallback UI. Below is an image of the to-do app with no error.
 
-![To-do App with no Error](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473257/Screenshot_189_jemaho.png)
+![To-do App with no Error](https://res.cloudinary.com/dvj2hbywq/image/upload/v1517473257/Screenshot_189_jemaho.png)
 
 Here's what happens when there is an error in the `<ToDoList />` component. 
 
-![To-do App with Error](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473272/Screenshot_186_x96uog.png)
+![To-do App with Error](https://res.cloudinary.com/dvj2hbywq/image/upload/v1517473272/Screenshot_186_x96uog.png)
 
 Note that the place where you place the error boundary in your code determines where the fallback UI will appear. Let us place the error boundary opening tag before the `<Input />` component.
 
@@ -115,7 +115,7 @@ Note that the place where you place the error boundary in your code determines w
 
 If there's an error, here's the display you get. Notice that unlike the previous image, the `input` does not appear. Kindly ignore the uneven spacing. :)
 
-![Todo App with error boundary component](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_187_tfkkom.png)
+![Todo App with error boundary component](https://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_187_tfkkom.png)
 
 Ideally, an error boundary component is declared once and then used throughout an application.
 
@@ -169,7 +169,7 @@ class ErrorBoundary extends React.Component {
 
 What we did is modify our state to capture the error and info. Then display this error message and info in the fallback UI. When there's an error, here's what we get. 
 
-![Todo app with error boundary component and error log](http://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_188_b8t90i.png)
+![Todo app with error boundary component and error log](https://res.cloudinary.com/dvj2hbywq/image/upload/v1517473273/Screenshot_188_b8t90i.png)
 
 You can also log the error gotten to an error reporting service.
 

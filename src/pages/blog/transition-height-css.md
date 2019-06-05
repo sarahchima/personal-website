@@ -86,7 +86,7 @@ article {
 
 And now the article slides up and down.
 
-![height with animation](http://res.cloudinary.com/dvj2hbywq/image/upload/v1524084041/Apr-18-2018-9_33-PM_uzuwka.gif)
+![height with animation](https://res.cloudinary.com/dvj2hbywq/image/upload/v1524084041/Apr-18-2018-9_33-PM_uzuwka.gif)
 
 You might think this is the part I say thank you for reading this article. No, it's not. There is a limitation that arises with this method. Let's consider it.
 

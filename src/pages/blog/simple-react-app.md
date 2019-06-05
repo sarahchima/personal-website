@@ -17,7 +17,7 @@ Here, I assume you have a basic knowledge of JSX, React Components, Properties a
 
 The first step in creating any React app is to break the UI into components. A component should ideally do one thing. So if you realize that a component does more than one thing, it might be time for you to break it down into smaller components.The UI of our app has been broken down into small components as shown in the image. 
 
-![components of app](http://res.cloudinary.com/dvj2hbywq/image/upload/v1508764606/Screenshot_173_obizyi.png)
+![components of app](https://res.cloudinary.com/dvj2hbywq/image/upload/v1508764606/Screenshot_173_obizyi.png)
 
 So, you can see that we have four components that make up our app. These are ;
 
