@@ -9,6 +9,8 @@ tags: ["react", "javascript"]
 
 A React App is usually one big component made up of smaller components. This makes for easy organization of code. A problem arises though when any of these smaller components has an error. What happens? The whole app crashes. Sad Story huh? Well, it doesn't have to be that way.
 
+You can learn more about React in <a href="https://www.toptal.com/react/react-tutorial-pt1" target="_blank">this article</a>.
+
 Along with React 16 came a feature that is a really good friend - Error Boundaries. Here's what the official document says about it.
 
 <i>Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.</i>
