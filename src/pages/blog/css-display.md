@@ -2,8 +2,8 @@
 title: "CSS Property: Display"
 date: "2019-06-25"
 description: "Learn about common display values in CSS"
-featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1550930072/potrait.jpg
-tags: ["javascript", "es6"]
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1561426476/Group_26_zv2l83.png
+tags: ["CSS"]
 ---
 
 
