@@ -10,7 +10,7 @@ tags: ["CSS"]
 The display property is one of the most commonly used properties in CSS. 
 
 Every HTML element on a web page is a rectangular box. The display property determines how these boxes will behave.
-Display is CSS's most important property for controlling layout. Every element has a default display value depending on what type of element it is. The default value for most elements is usually `block` or `inline`.
+It is CSS's most important property for controlling layout. Every element has a default display value depending on what type of element it is. The default value for most elements is usually `block` or `inline`.
 
 Here are some commonly used display values:
 
