@@ -94,7 +94,7 @@ This will result in:
 </style>
 ###Display: Block
 
-Block level elements always start a new line and take up the full width(horizontal space) available. This display type also allows us to specify the width and height of the element. With `display:block`, the new element always starts on a new line. It cannot be used to wrap elements around other elements.
+Block level elements always start a new line and take up the full width(horizontal space) available. This display type also allows us to specify the width and height of the element. With `display: block`, the new element always starts on a new line. It cannot be used to wrap elements around other elements.
 
 Examples of elements with default block display type are `<p>`, `<h1>` - `</h6>`, `<div>`, `<form>`, `<section>` etc.
 
