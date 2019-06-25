@@ -28,7 +28,7 @@ Let us discuss each of them.
 ### Display: Inline
 This is the default value for many HTML elements.
 
-Inline elements are displayed side by side (in line or horizontally) on a page. They take only as much space as needed on a page. They do not accept width or height properties and top or bottom margin/padding. Wrapping text in this element does not break the flow of the text.
+Inline elements are displayed side by side (inline or horizontally) on a page. They take only as much space as needed on a page. They do not accept width or height properties and top or bottom margin/padding. Wrapping text in this element does not break the flow of the text.
 
 Some examples are `span`, `em`, `b`. 
 
