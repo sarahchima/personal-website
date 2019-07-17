@@ -68,7 +68,7 @@ What we will do here is to create an empty string that will hold the reversed st
 
 ###Solution 3 - Using the Array.reduce() method
 
-The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. You can [read about it](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)if you are not familiar with it.
+The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. You can [read about it](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)   if you are not familiar with it.
 
 To use the reduce method, we need to convert our string to an array. Next, we use the reduce method to convert it to a string. The reducer in this case appends each character of the string to the accumulator which in the code below is `reversed`. 
 
@@ -102,7 +102,7 @@ const reverseString = (string) => string.split('').reduce((rev, char) => char + 
 ### Solution 4 - Using recursion
 Are you a friend of recursion? If not, let me introduce you to it. Recursion is a way of solving a problem by using a function that calls itself. Each time the function calls itself, it reduces the problem into subproblems. This recursive call continues until a point is reached where the subproblem can be called without further recursion. 
 
-An important part of a recursive function is a base case. This is the condition(s) where the recursive call terminates to ensure it does not result to an infinite loop. You can find more explanations (here)[https://dev.to/sloan/explain-recursion-like-im-five-5c6].
+An important part of a recursive function is a base case. This is the condition(s) where the recursive call terminates to ensure it does not result to an infinite loop. You can find more explanations [here](https://dev.to/sloan/explain-recursion-like-im-five-5c6).
 
 Back to reversing a string. In this case, our base case is when the string is empty. We use the string.substring() method to get remove the first character in the string and pass the other characters to the function. Then we append the first character to our return statement as seen in the code below.
 
@@ -130,5 +130,5 @@ So there you have it, four cools ways to reverse a string in JavaScript.
 
 Got any question or feedback reach out to me via my contact form.
 
-Go follow me on (Instagram)[https://www.instagram.com/sarah_codes_/] where I post software development tips and advice.
+Go follow me on [Instagram](https://www.instagram.com/sarah_codes_/) where I post software development tips and advice.
   
