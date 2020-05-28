@@ -2,7 +2,7 @@
 title: "Implementing a Linked List in JavaScript"
 date: "2020-05-27"
 description: "An introduction to Linked Lists and how to implement them in JavaScript"
-featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1590572188/Group_14_5_bvpwu0.png
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1590664431/Screen_Shot_2020-05-28_at_12.13.09_PM_c6tcdn.png
 tags: ["javascript", "algorithms", "dataStructures"]
 ---
 
