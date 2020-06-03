@@ -8,7 +8,7 @@ tags: ["git", "software development"]
 
 Okay, it's more of things I want to learn to do with git. I've used git for more some years now and I still find myself googling how to do some basic things in git. So this is my attempt at learning how to do some of these things by writing about it. I hope I succeed. Well, even if I don't at least I'll have a reference where I can easily find these commands. 
 
-Before we move to learn these things, there's something a colleague of mine once told me. He told me that everything is possible in git and that nothing is lost in git. I don't know if the former part of his statement is entirely true but I bear that in mind every time I'm trying to do something in Git. I believe that I'm going to find a command that will help me do what I need to do. I just have to google with the right words. If you are new to git, I want you to have that believe too. 
+Before we move to learn these things, there's something a colleague of mine once told me. He told me that everything is possible with git and that nothing is lost in git. I don't know if the former part of his statement is entirely true but I bear that in mind every time I'm trying to do something with git. I believe that I'm going to find a command that will help me do what I need to do. I just have to google with the right words. If you are new to git, I want you to have that believe too. 
 
 In this article, we'll consider how to do the following:
 
