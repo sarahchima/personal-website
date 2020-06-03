@@ -66,7 +66,7 @@ h1 {
 ```
 Here's how it works.
 
-![Responsive Typography](http://res.cloudinary.com/dvj2hbywq/image/upload/v1513715493/Dec-19-2017-8_54-PM_qvjd5g.gif)
+![Responsive Typography](https://res.cloudinary.com/dvj2hbywq/image/upload/v1513715493/Dec-19-2017-8_54-PM_qvjd5g.gif)
 
 Notice that the text gets really small as the screen gets smaller. This can be combined with media queries to make it look great on all screens. You can refer to [this article](https://dev.to/promhize/completely-responsive-css-values-no-not-media-queries-d4l) for a detailed explanation of a variant of this formula and how it can work with media queries.  
 

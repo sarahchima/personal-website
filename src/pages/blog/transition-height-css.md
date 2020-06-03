@@ -96,7 +96,7 @@ What we did above works well when the height of the article is known. What happe
 For dynamic content, the height of an element should be set to `auto`. This way, any increase or decrease in the height of the element will be accomodated. Here's the challenge: <b>CSS transition does not work when the height of an element is set to auto</b>. Here's what you'll get.
 
 ![height without animation]
-(http://res.cloudinary.com/dvj2hbywq/image/upload/v1524024293/Apr-18-2018-4_36-AM_f0tzic.gif)
+(https://res.cloudinary.com/dvj2hbywq/image/upload/v1524024293/Apr-18-2018-4_36-AM_f0tzic.gif)
 
 The good news about this is that there is a way around this without having to resort to more JavaScript.
 
@@ -121,7 +121,7 @@ article.expanded {
 
 This way the animation works and we still get the effect we want. The transition time might have to be adjusted depending on the effect you want.
 
-![height with animation](http://res.cloudinary.com/dvj2hbywq/image/upload/v1524084041/Apr-18-2018-9_33-PM_uzuwka.gif)
+![height with animation](https://res.cloudinary.com/dvj2hbywq/image/upload/v1524084041/Apr-18-2018-9_33-PM_uzuwka.gif)
 
 Got any question or addition? Please leave a comment.
 
