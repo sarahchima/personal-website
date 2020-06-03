@@ -33,6 +33,23 @@ export default ({ data }) => {
 						</p>
 					</div>
 					<div dangerouslySetInnerHTML={{ __html: post.html }} />
+					<form action="https://sarahchima.us7.list-manage.com/subscribe/post?u=debf652409e37dd948f33287d&amp;id=53e01a2619" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="a-form validate" target="_blank" noValidate>
+							<p className="ab-side-text">Be the first to know when I publish a new article. Fill the form below. I promise not to spam.</p>
+							<div>
+									<label  for="mce-FNAME" style={{position: "absolute", left: "-5000px"}}>Name</label>
+									<input type="text" name="FNAME" class="ab-side-input a-form-input" id="mce-FNAME" placeholder="First Name"/>
+									
+									<label for="mce-EMAIL"style={{position: "absolute", left: "-5000px"}}>Email</label>
+									<input type="email" name="EMAIL" id="mce-EMAIL" className="ab-side-input required email a-form-input" placeholder="Email Address" required/>
+									<input type="hidden" value="1" name="embed" />
+									<div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_debf652409e37dd948f33287d_53e01a2619" tabIndex="-1" value="" /></div>
+									<input type="submit" value="Subscribe" name="subscribe" class="ab-side-input a-form-submit"/>
+									<div id="mce-responses" class="clear">
+											<div class="response" id="mce-error-response" style={{display:"none"}}></div>
+											<div class="response" id="mce-success-response" style={{display:"none"}}></div>
+									</div> 
+							</div>
+					</form>
 				</div>
 				<aside>
 					<div className="ab-side">
