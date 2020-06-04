@@ -277,6 +277,9 @@ pre[class*="language-"] {
 }
 
 @media (max-width: 900px) {
+    .desktop-only {
+        display: none;
+    }
     .a-main {
         display: block;
     }
