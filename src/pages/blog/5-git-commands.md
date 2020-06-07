@@ -1,5 +1,5 @@
 ---
-title: "5 things you can do with Git- with examples"
+title: "5 things you can do with Git - with examples"
 date: "2020-06-03"
 description: In this article, we'll discuss how to add remote repositories, change remote repositories, delete a branch locally and remotely, merge a file from one branch to another and undo a commit locally and remotely.
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1591202236/yancy-min-842ofHC6MaI-unsplash_1_fhvaov.jpg
