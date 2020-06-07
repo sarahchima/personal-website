@@ -1,5 +1,5 @@
 ---
-title: "Implementing a Linked List in JavaScript"
+title: "How to implement a Linked List in JavaScript"
 date: "2020-05-27"
 description: "An introduction to Linked Lists and how to implement them in JavaScript"
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1590664431/Screen_Shot_2020-05-28_at_12.13.09_PM_c6tcdn.png
@@ -108,9 +108,10 @@ This method return the number of nodes present in the linked list.
 ```js
     size() {
         let count = 0; 
-        while (this.head) {
+        let node = this.head;
+        while (node) {
             count++;
-            this.head = this.head.next
+            node = node.next
         }
         return count;
     }
