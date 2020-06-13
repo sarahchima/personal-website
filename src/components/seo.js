@@ -60,6 +60,10 @@ function SEO({ description, lang, meta, keywords, title, featuredImage }) {
                 property: `twitter:image`,
                 content: image,
               },
+              {
+                name: `monetization`,
+                content: `$ilp.uphold.com/YmK2iUz8eGDA`
+              }
             ]
               .concat(
                 keywords.length > 0
