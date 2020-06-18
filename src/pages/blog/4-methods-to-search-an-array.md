@@ -1,7 +1,7 @@
 ---
-title: "4 Methods to Search an Array"
-date: "2020-06-18""
-description: "Find out how you can use the filter, find, includes and indexOf methods in JavaScript to search for an item in an array"
+title: 4 Methods to Search an Array
+date: "2020-06-18"
+description: Find out how you can use the filter, find, includes and indexOf methods in JavaScript to search for an item in an array
 featuredImage: v1592484751/markus-winkler-afW1hht0NSs-unsplash_w4vobd.jpg
 tags: ["JavaScript"]
 ---
