@@ -2,7 +2,7 @@
 title: 4 Methods to Search an Array
 date: "2020-06-18"
 description: Find out how you can use the filter, find, includes and indexOf methods in JavaScript to search for an item in an array
-featuredImage: v1592484751/markus-winkler-afW1hht0NSs-unsplash_w4vobd.jpg
+featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1592484751/markus-winkler-afW1hht0NSs-unsplash_w4vobd.jpg
 tags: ["JavaScript"]
 ---
 
@@ -80,7 +80,7 @@ const array = [10, 11, 3, 20, 5];
 
 const includesTwenty = array.includes(20);
 
-console.log(includesTwentyThree)//true
+console.log(includesTwenty)//true
 ```
 
 You'll notice a difference between this method and other methods we have considered. This method accepts a value rather than a callback as the argument. Here's the syntax for the includes method.
