@@ -3,7 +3,7 @@ title: "Learn the Basics: The CSS Position Property"
 date: "2020-06-11"
 description: Learn about the CSS position property and its values.
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1591873454/pankaj-patel-4oAFasAPftg-unsplash_famvdv.jpg
-tags: ["css", "javascript"]
+tags: ["css", "LearnTheBasics"]
 ---
 
 To be super good at CSS you need to understand the basics of CSS. You have to understand CSS properties and their values. I know this is important, that's why I'm starting a series called "Learn the Basics". In each article of this series, I'll discuss one CSS property and provide concise but insightful details on it.
