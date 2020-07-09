@@ -1,5 +1,5 @@
 ---
-title: "Understanding CSS Specificity"
+title: "What is CSS Specificity?"
 date: "2020-07-09"
 description: "CSS specificity is one fundamental topic to understand if you are to get better at CSS. In this article, we discuss what CSS specificity is and how it is used to determine which styles are applied to an element."
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1594312511/markus-spiske-MI9-PY5cyNs-unsplash_rvjnnj.jpg
