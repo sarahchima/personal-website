@@ -6,7 +6,7 @@ featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1594312511/mar
 tags: ["CSS", "LearnTheBasics"]
 ---
 
-CSS specificity is one fundamental topic to understand if you are to get better at CSS. It is the set of rules applied to CSS selectors that determines which style is applied to an element. To understand this better, it's important we understand a related topic - Cascading in CSS . 
+CSS specificity is an important topic to understand if you want to get better at CSS. It is the set of rules applied to CSS selectors that determines which style is applied to an element. To understand this better, it's important we understand a related topic - Cascading in CSS . 
 
 ### The Cascading Nature of CSS
 
