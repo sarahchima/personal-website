@@ -328,7 +328,7 @@ Classes, Attributes and Pseudo-classes      -   10
 Elements and Pseudo-elements                -    1 
 ```
 
-4. `important` overrides all other styles regardless of the specificity of the selector where it is used.
+4. `!important` overrides all other styles regardless of the specificity of the selector where it is used.
 
 I hope you enjoyed reading this article. 
 
