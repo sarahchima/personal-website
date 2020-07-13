@@ -8,7 +8,7 @@ tags: ["CSS", "LearnTheBasics"]
 
 CSS specificity is an important topic to understand if you want to get better at CSS. It is the set of rules applied to CSS selectors that determines which style is applied to an element. To understand this better, it's important we understand a related topic - Cascading in CSS . 
 
-### The Cascading Nature of CSS
+## The Cascading Nature of CSS
 
 CSS means Cascading Style Sheets. "Cascading" means that the order the CSS rules are applied to an element matter. Ideally, if two rules are applied to the same element, the one that comes last is the one that will be used. Let's use an example to understand this.
 
@@ -59,7 +59,7 @@ Here's the result:
 
 Notice that the first is applied. The `#paragraph` is an id selector, while the `style1` is a class selector. This is because cascade works with specificity to determine which values are applied to an element. So, what is CSS specifity?
 
-CSS Specificity explained
+## CSS Specificity explained
 
 According to MDN,
 <quote>
@@ -326,7 +326,6 @@ Inline Styles                               - 1000
 ID selectors                                -  100
 Classes, Attributes and Pseudo-classes      -   10
 Elements and Pseudo-elements                -    1 
-
 ```
 
 4. `important` overrides all other styles regardless of the specificity of the selector where it is used.
