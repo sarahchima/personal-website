@@ -238,7 +238,7 @@ This is the result:
 
 Let's use our weight system to understand why the color value of the second selector is applied.
 
-For `#div-1 > .second-block > .text`, we have one ID selector and two class selectors. The sum of their weights is `100 + 10 + 10 = 20`.
+For `#div-1 > .second-block > .text`, we have one ID selector and two class selectors. The sum of their weights is `100 + 10 + 10 = 120`.
 
 For `.first-block > #div-2 > #paragraph`, we have one class selector and two ID selectors. The sum of their weights is `10 + 100 + 100 = 210`. 
 
