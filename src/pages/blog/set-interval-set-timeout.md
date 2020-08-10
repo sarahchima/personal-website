@@ -162,7 +162,7 @@ if (counter === 3) {
 
 And at that point, the condition is not true, so the timer is never cleared. This is also the reason why in our `clearTimeout` example, the callback function passed to the `setTimeout` is never triggered. Because JavaScript immediately moved on to the next line of code.
 
-You can read more about [Asynchronous JavaScript here] (https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)
+You can read more about [Asynchronous JavaScript here](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee).
 
 
 ### Summary
