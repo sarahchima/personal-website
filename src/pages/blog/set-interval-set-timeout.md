@@ -1,5 +1,5 @@
 ---
-title: How to use the SetInterval and SetTimeout Methods in JavaScript
+title: How to use the setTimeout and setInterval Methods in JavaScript
 date: "2020-08-07"
 description: Understand how to use the setInterval and setTimeout Methods in JavaScript.
 featuredImage: https://res.cloudinary.com/dvj2hbywq/image/upload/v1596819107/neonbrand-KYxXMTpTzek-unsplash_kuey5r.jpg
