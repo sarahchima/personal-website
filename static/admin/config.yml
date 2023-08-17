@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  # name: git-gateway
+  name: test-repo
   branch: v2
 
 publish_mode: editorial_workflow
@@ -14,10 +15,11 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "path", label: "Path" }
+      - {label: "Path", name: "path", }
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number", required: false}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
